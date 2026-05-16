@@ -1,16 +1,6 @@
 # CommonsBase_FileMagic
 ## workspace
 
-  %% import { type="github-l2", repo="dkpkg/CommonsBase_Std" }
-  'import'
-  'github-l2'
-  { {
-      'CommonsBase_Std', '2.5.202605150422', {
-        'blake2b-256:25f763540568e6d87af58631144cd65c0f12cf11a10ffad7a0b89aabe3e11763',
-        'sha256:4da972429606075efb05c6859fa7b9b68c0a6346f5d5f21d2aa5d303330b053a',
-        'sha1:3c920d3174b29146528fc30e07ec1ffb6ce4fbac'
-      } } }
-
   %% import { type="github-l2", repo="dkpkg/CommonsBase_LLVM" }
   'import'
   'github-l2'
