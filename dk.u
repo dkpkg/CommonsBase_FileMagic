@@ -33,23 +33,23 @@
 
   % unified.asset { name="CompatHeader", file="assets/compat/include/filemagic_compat.h" }
   'asset'
-  '1832'
-  'sha256:505d7d651572531d43b58a8700a900487bd24841c8bdbf66aac4f02ab8f99d92'
+  '1744'
+  'sha256:30069f7cc319c454cc3ef55799af68388208c118bb191c58edcf85476f1d0854'
 
   % unified.asset { name="CompatErr", file="assets/compat/include/err.h" }
   'asset'
-  '453'
-  'sha256:b96af0bb2ffd44799b6aaa0cdaf735ea14ae05b19d4396991447604940b61886'
+  '438'
+  'sha256:6d70038cdc4e7f60f8b3f07558c827cf49955b7b9b90eec0fbb2b476afc3e514'
 
   % unified.asset { name="CompatRegex", file="assets/compat/include/regex.h" }
   'asset'
-  '957'
-  'sha256:2c3ea2badb4f288dac8ecabf8440e124aeeb3e05e6a71c6627a42371b1c0fd42'
+  '909'
+  'sha256:99f41ed688ad239720c9a061ee3063bcb826e782dbd53f43caff73f64ac108b8'
 
   % unified.asset { name="CompatCdefs", file="assets/compat/include/sys/cdefs.h" }
   'asset'
-  '484'
-  'sha256:bc800300201928cbf07a55659623ca77ea1d763fab0595b28161a0c1bd27ae58'
+  '456'
+  'sha256:914f2cf9a9cf73263a71b6645b16e1828809be0818b00b81d68a481a794ac170'
 
   % unified.asset { name="CompatQueue", file="assets/compat/include/sys/queue.h" }
   'asset'
@@ -63,8 +63,8 @@
 
   % unified.asset { name="CompatNull", file="assets/compat/include/sys/_null.h" }
   'asset'
-  '117'
-  'sha256:700d104dfa19f5707fd4ad70dfa3068641973077eab8c523ec0af34402ca7151'
+  '111'
+  'sha256:7899479146940b2f2c2866a0c453bb490f13a2672a070ba60079a382f7c21bf6'
 
   % unified.asset { name="CompatVisHeader", file="assets/compat/include/vis.h" }
   'asset'
@@ -73,13 +73,13 @@
 
   % unified.asset { name="CompatSource", file="assets/compat/src/filemagic_compat.c" }
   'asset'
-  '4617'
-  'sha256:42650a0e46d639e8fa527fab9dd58b6929a8a5226799a46e35c6cb79531d353f'
+  '4366'
+  'sha256:33a0881108e88db932efbb9d59f53ca7fee354d9f289c0f7b80aafb50fdc0139'
 
   % unified.asset { name="CompatRegexSource", file="assets/compat/src/regex_compat.cpp" }
   'asset'
-  '3911'
-  'sha256:f46debff0565159bb48d21caafb34340dbf48bc84751d2684590f020028b7340'
+  '3757'
+  'sha256:05b49915e18a7501d71a4e1f64ddfdd7e7f2c79760be6c64151f93175349d3a5'
 
   % unified.asset { name="CompatVisSource", file="assets/compat/src/vis.c" }
   'asset'
@@ -88,13 +88,13 @@
 
   % unified.asset { name="PortableMain", file="assets/src/filemagic_portable_main.c" }
   'asset'
-  '9565'
-  'sha256:f1359a8c4c2918953de2354e785acb33278eeb8d0c49e7745602f02485a78110'
+  '9131'
+  'sha256:70c3f8028909368946929ce092b6912a3e9dcdfb9c893f40c905ce889bdb076e'
 
   % unified.asset { name="PortableXmalloc", file="assets/src/filemagic_portable_xmalloc.c" }
   'asset'
-  '1474'
-  'sha256:b02a1077115f6e53f383cd9b11c892d6477ef4c887567136c454d57932578a36'
+  '1399'
+  'sha256:5dc0a1c17f42bdd11218fb929320ef78f6315cb24f5cebe963a921eb230b7b4d'
 
   % unified.asset { name="EmbeddedMagicHeader", file="assets/src/filemagic_embedded_magic.h" }
   'asset'
