@@ -120,7 +120,15 @@ jobs:
         if: ${{ runner.os != 'Windows' && matrix.experimental-mlfront-ref }}
         shell: bash
         run: |
-          printf '#!/bin/sh\nset -euf\nopam exec -- dk0 "$@"\n' > .ci-dk0
+          cat > .ci-dk0 <<'EOF'
+          #!/bin/sh
+          set -euf
+          DK_PROJECT_DIR=$(CDPATH= cd -- "$(dirname "$0")" && pwd)
+          exec opam exec -- dk0 \
+            -isystem "$DK_PROJECT_DIR/etc/dk/i" \
+            --cell "dk0=$DK_PROJECT_DIR" \
+            "$@"
+          EOF
           chmod +x .ci-dk0
 
       - name: Cache restore dk stores
@@ -149,11 +157,11 @@ jobs:
           PART="${PART%%.*}"
 
           rm -rf etc/dk/i
-          echo "$DK0 --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD update"
-          "$DK0" --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD update
+          echo "sh $DK0 --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD update"
+          sh "$DK0" --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD update
 
-          echo "$DK0 --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$PART --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}"
-          "$DK0" --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-"$PART" --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}
+          echo "sh $DK0 --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$PART --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}"
+          sh "$DK0" --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-"$PART" --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}
 
           du -sh dk-dist/*
 
@@ -170,7 +178,7 @@ jobs:
           else
             DK0=./dk0
           fi
-          "$DK0" --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD query
+          sh "$DK0" --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD query
 
       - name: Distribute Modules on Windows
         if: ${{ runner.os == 'Windows' }}
@@ -184,14 +192,14 @@ jobs:
           $part = $part.Substring(0, $part.LastIndexOf('.'))
           if (Test-Path etc/dk/i) { Remove-Item -Recurse -Force etc/dk/i }
 
-          Write-Host ".\dk0.cmd --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD update"
-          .\dk0.cmd --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD update
+          Write-Host ".\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --keys-env DK_BUILD update"
+          .\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --keys-env DK_BUILD update
           if ($LASTEXITCODE -ne 0) {
             throw "dk0 update failed with exit code $LASTEXITCODE"
           }
 
-          Write-Host ".\dk0.cmd --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$part --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}"
-          .\dk0.cmd --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$part --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}
+          Write-Host ".\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$part --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}"
+          .\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$part --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}
           if ($LASTEXITCODE -ne 0) {
             throw "dk0 distribute failed with exit code $LASTEXITCODE"
           }
@@ -210,7 +218,7 @@ jobs:
           DK_BUILD_SECKEY: "${{ secrets.distribute_2_5_seckey }}"
           OCAMLRUNPARAM: b
         run: |
-          .\dk0.cmd --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD query
+          .\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --keys-env DK_BUILD query
           if ($LASTEXITCODE -ne 0) {
             throw "dk0 query failed with exit code $LASTEXITCODE"
           }
