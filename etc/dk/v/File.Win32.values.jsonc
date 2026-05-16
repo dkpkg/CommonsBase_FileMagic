@@ -1,0 +1,191 @@
+// OpenBSD file(1) built for Windows using the LLVM MinGW toolchain.
+{
+    "$schema": "https://github.com/diskuv/dk/raw/refs/heads/V2_5/etc/jsonschema/dk-values.json",
+    "schema_version": {
+        "major": 1,
+        "minor": 0
+    },
+    "forms": [
+        {
+            "id": "CommonsBase_FileMagic.File.Win32@7.8.0",
+            "precommands": {
+                "sequential": true,
+                "private": [
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatHeader@7.8.0 -p assets/compat/include/filemagic_compat.h -f compat/include/filemagic_compat.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatErr@7.8.0 -p assets/compat/include/err.h -f compat/include/err.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatRegex@7.8.0 -p assets/compat/include/regex.h -f compat/include/regex.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatCdefs@7.8.0 -p assets/compat/include/sys/cdefs.h -f compat/include/sys/cdefs.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatNull@7.8.0 -p assets/compat/include/sys/_null.h -f compat/include/sys/_null.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatQueue@7.8.0 -p assets/compat/include/sys/queue.h -f compat/include/sys/queue.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatTree@7.8.0 -p assets/compat/include/sys/tree.h -f compat/include/sys/tree.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatVisHeader@7.8.0 -p assets/compat/include/vis.h -f compat/include/vis.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatSource@7.8.0 -p assets/compat/src/filemagic_compat.c -f compat/src/filemagic_compat.c",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatRegexSource@7.8.0 -p assets/compat/src/regex_compat.cpp -f compat/src/regex_compat.cpp",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatVisSource@7.8.0 -p assets/compat/src/vis.c -f compat/src/vis.c",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.PortableMain@7.8.0 -p assets/src/filemagic_portable_main.c -f portable/filemagic_portable_main.c",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.PortableXmalloc@7.8.0 -p assets/src/filemagic_portable_xmalloc.c -f portable/filemagic_portable_xmalloc.c",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.EmbeddedMagicHeader@7.8.0 -p assets/src/filemagic_embedded_magic.h -f portable/filemagic_embedded_magic.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.EmbeddedMagicSource@7.8.0 -p assets/src/filemagic_embedded_magic.c -f portable/filemagic_embedded_magic.c"
+                ]
+            },
+            "function": {
+                "execution": [
+                    {
+                        "name": "OSFamily",
+                        "value": "windows"
+                    }
+                ],
+                "envmods": [
+                    "<PATH=$(--path=absnative get-object CommonsBase_LLVM.Toolchain.MinGW@21.1.8+rev-20251216 -s Release.execution_abi -d : -e 'bin/*')${/}bin"
+                ],
+                "commands": [
+                    [
+                        "$(get-object CommonsBase_Std.S7z.Windows7zExe@25.1.0 -s Release.Windows_x86 -d :)/7z.exe",
+                        "x",
+                        "-y",
+                        "-o.",
+                        "$(get-asset CommonsBase_FileMagic.File.Bundle@7.8.0 -p src.tar.gz -f src.tar.gz)",
+                        "src.tar"
+                    ],
+                    [
+                        "$(get-object CommonsBase_Std.S7z.Windows7zExe@25.1.0 -s Release.Windows_x86 -d :)/7z.exe",
+                        "x",
+                        "-y",
+                        "-o.",
+                        "src.tar",
+                        "usr.bin/file/*"
+                    ],
+                    [
+                        "$(get-object CommonsBase_Std.Coreutils@0.6.0 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f coreutils.exe -e '*')",
+                        "rm", "-f", "src.tar"
+                    ],
+                    [
+                        "$(get-object CommonsBase_Std.Coreutils@0.6.0 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f coreutils.exe -e '*')",
+                        "mkdir", "-p", "${SLOTABS.Release.Windows_x86_64}/bin"
+                    ],
+                    [
+                        "$(--path=absnative get-object CommonsBase_LLVM.Toolchain.MinGW@21.1.8+rev-20251216 -s Release.execution_abi -e bin/x86_64-w64-mingw32-gcc.exe -d :)/bin/x86_64-w64-mingw32-gcc.exe",
+                        "-x", "c++",
+                        "-std=gnu++17",
+                        "-Icompat/include",
+                        "-o", "portable/regex_compat-win64.o",
+                        "-c", "compat/src/regex_compat.cpp"
+                    ],
+                    [
+                        "$(--path=absnative get-object CommonsBase_LLVM.Toolchain.MinGW@21.1.8+rev-20251216 -s Release.execution_abi -e bin/x86_64-w64-mingw32-gcc.exe -d :)/bin/x86_64-w64-mingw32-gcc.exe",
+                        "-D_GNU_SOURCE",
+                        "-D__USE_MINGW_ANSI_STDIO",
+                        "-static",
+                        "-static-libgcc",
+                        "-static-libstdc++",
+                        "-include", "compat/include/filemagic_compat.h",
+                        "-Icompat/include",
+                        "-Iportable",
+                        "-Iusr.bin/file",
+                        "-o", "${SLOTABS.Release.Windows_x86_64}/bin/file.exe",
+                        "portable/filemagic_portable_main.c",
+                        "portable/filemagic_embedded_magic.c",
+                        "portable/filemagic_portable_xmalloc.c",
+                        "compat/src/filemagic_compat.c",
+                        "portable/regex_compat-win64.o",
+                        "compat/src/vis.c",
+                        "usr.bin/file/magic-common.c",
+                        "usr.bin/file/magic-dump.c",
+                        "usr.bin/file/magic-load.c",
+                        "usr.bin/file/magic-test.c",
+                        "usr.bin/file/text.c",
+                        "-lstdc++"
+                    ],
+                    [
+                        "$(get-object CommonsBase_Std.Coreutils@0.6.0 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f coreutils.exe -e '*')",
+                        "mkdir", "-p", "${SLOTABS.Release.Windows_x86}/bin"
+                    ],
+                    [
+                        "$(--path=absnative get-object CommonsBase_LLVM.Toolchain.MinGW@21.1.8+rev-20251216 -s Release.execution_abi -e bin/i686-w64-mingw32-gcc.exe -d :)/bin/i686-w64-mingw32-gcc.exe",
+                        "-x", "c++",
+                        "-std=gnu++17",
+                        "-Icompat/include",
+                        "-o", "portable/regex_compat-win32.o",
+                        "-c", "compat/src/regex_compat.cpp"
+                    ],
+                    [
+                        "$(--path=absnative get-object CommonsBase_LLVM.Toolchain.MinGW@21.1.8+rev-20251216 -s Release.execution_abi -e bin/i686-w64-mingw32-gcc.exe -d :)/bin/i686-w64-mingw32-gcc.exe",
+                        "-D_GNU_SOURCE",
+                        "-D__USE_MINGW_ANSI_STDIO",
+                        "-static",
+                        "-static-libgcc",
+                        "-static-libstdc++",
+                        "-include", "compat/include/filemagic_compat.h",
+                        "-Icompat/include",
+                        "-Iportable",
+                        "-Iusr.bin/file",
+                        "-o", "${SLOTABS.Release.Windows_x86}/bin/file.exe",
+                        "portable/filemagic_portable_main.c",
+                        "portable/filemagic_embedded_magic.c",
+                        "portable/filemagic_portable_xmalloc.c",
+                        "compat/src/filemagic_compat.c",
+                        "portable/regex_compat-win32.o",
+                        "compat/src/vis.c",
+                        "usr.bin/file/magic-common.c",
+                        "usr.bin/file/magic-dump.c",
+                        "usr.bin/file/magic-load.c",
+                        "usr.bin/file/magic-test.c",
+                        "usr.bin/file/text.c",
+                        "-lstdc++"
+                    ],
+                    [
+                        "$(get-object CommonsBase_Std.Coreutils@0.6.0 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f coreutils.exe -e '*')",
+                        "mkdir", "-p", "${SLOTABS.Release.Windows_arm64}/bin"
+                    ],
+                    [
+                        "$(--path=absnative get-object CommonsBase_LLVM.Toolchain.MinGW@21.1.8+rev-20251216 -s Release.execution_abi -e bin/aarch64-w64-mingw32-gcc.exe -d :)/bin/aarch64-w64-mingw32-gcc.exe",
+                        "-x", "c++",
+                        "-std=gnu++17",
+                        "-Icompat/include",
+                        "-o", "portable/regex_compat-winarm64.o",
+                        "-c", "compat/src/regex_compat.cpp"
+                    ],
+                    [
+                        "$(--path=absnative get-object CommonsBase_LLVM.Toolchain.MinGW@21.1.8+rev-20251216 -s Release.execution_abi -e bin/aarch64-w64-mingw32-gcc.exe -d :)/bin/aarch64-w64-mingw32-gcc.exe",
+                        "-D_GNU_SOURCE",
+                        "-D__USE_MINGW_ANSI_STDIO",
+                        "-static",
+                        "-static-libgcc",
+                        "-static-libstdc++",
+                        "-include", "compat/include/filemagic_compat.h",
+                        "-Icompat/include",
+                        "-Iportable",
+                        "-Iusr.bin/file",
+                        "-o", "${SLOTABS.Release.Windows_arm64}/bin/file.exe",
+                        "portable/filemagic_portable_main.c",
+                        "portable/filemagic_embedded_magic.c",
+                        "portable/filemagic_portable_xmalloc.c",
+                        "compat/src/filemagic_compat.c",
+                        "portable/regex_compat-winarm64.o",
+                        "compat/src/vis.c",
+                        "usr.bin/file/magic-common.c",
+                        "usr.bin/file/magic-dump.c",
+                        "usr.bin/file/magic-load.c",
+                        "usr.bin/file/magic-test.c",
+                        "usr.bin/file/text.c",
+                        "-lstdc++"
+                    ]
+                ]
+            },
+            "outputs": {
+                "assets": [
+                    {
+                        "slots": [
+                            "Release.Windows_x86_64",
+                            "Release.Windows_x86",
+                            "Release.Windows_arm64"
+                        ],
+                        "paths": [
+                            "bin/file.exe"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

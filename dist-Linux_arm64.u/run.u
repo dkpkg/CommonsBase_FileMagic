@@ -1,0 +1,8 @@
+# Distribution for Linux arm64 CommonsBase_FileMagic
+
+## OpenBSD file(1)
+
+  $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.Linux_arm64 -d ${RUNTIME}/Linux_arm64-File-7.8.0
+  \test(pass)\dkobjects\;{
+    "Release.Linux_arm64": "o5avhm2mcs3q527pe3vv5yownl2orfxu7ak3bpy7kvjve5iwpr6gq"
+  }

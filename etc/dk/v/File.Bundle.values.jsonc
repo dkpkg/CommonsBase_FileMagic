@@ -1,0 +1,43 @@
+// OpenBSD file(1) sources from the OpenBSD 7.8 src.tar.gz release tarball.
+// Test: ./dk0 --trust-local-package CommonsBase_FileMagic --autofix get-bundle CommonsBase_FileMagic.File.Bundle@7.8.0 -d target/filemagic-src
+{
+    "$schema": "https://github.com/diskuv/dk/raw/refs/heads/V2_5/etc/jsonschema/dk-values.json",
+    "schema_version": {
+        "major": 1,
+        "minor": 0
+    },
+    "bundles": [
+        {
+            "id": "CommonsBase_FileMagic.File.Bundle@7.8.0",
+            "listing": {
+                "origins": [
+                    {
+                        "name": "openbsd-7.8-src",
+                        "mirrors": [
+                            "https://mirror.aarnet.edu.au/pub/OpenBSD/7.8",
+                            "https://openbsd.c3sl.ufpr.br/pub/OpenBSD/7.8",
+                            "https://ftp.OpenBSD.org/pub/OpenBSD/7.8",
+                            "https://ftp.fr.openbsd.org/pub/OpenBSD/7.8",
+                            "https://ftp.fau.de/pub/OpenBSD/7.8",
+                            "https://ftp.jaist.ac.jp/pub/OpenBSD/7.8",
+                            "https://mirror.freedif.org/pub/OpenBSD/7.8",
+                            "https://ftp.nluug.nl/pub/OpenBSD/7.8",
+                            "https://mirror.ox.ac.uk/pub/OpenBSD/7.8",
+                            "https://mirrors.ocf.berkeley.edu/pub/OpenBSD/7.8"
+                        ]
+                    }
+                ]
+            },
+            "assets": [
+                {
+                    "origin": "openbsd-7.8-src",
+                    "path": "src.tar.gz",
+                    "checksum": {
+                        "sha256": "1f20cc61f3b5bc9be69be131f9c897635ca6c3b4eba3a69e938a68e74139f48a"
+                    },
+                    "size": 222813424
+                }
+            ]
+        }
+    ]
+}

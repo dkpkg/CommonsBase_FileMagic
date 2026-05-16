@@ -1,0 +1,107 @@
+# CommonsBase_FileMagic
+## workspace
+
+  %% import { type="github-l2", repo="dkpkg/CommonsBase_Std" }
+  'import'
+  'github-l2'
+  { {
+      'CommonsBase_Std', '2.5.202605150422', {
+        'blake2b-256:25f763540568e6d87af58631144cd65c0f12cf11a10ffad7a0b89aabe3e11763',
+        'sha256:4da972429606075efb05c6859fa7b9b68c0a6346f5d5f21d2aa5d303330b053a',
+        'sha1:3c920d3174b29146528fc30e07ec1ffb6ce4fbac'
+      } } }
+
+  %% import { type="github-l2", repo="dkpkg/CommonsBase_LLVM" }
+  'import'
+  'github-l2'
+  { {
+      'CommonsBase_LLVM', '2.5.202605151454', {
+        'blake2b-256:533b8ac7c309b980246b5c6d4416d6abd975cfaebab5bcbc3feefe8b7a0fb364',
+        'sha256:068bb28d9832ba3cd66c3220c178eec75b40b9bfb18a2fd55382a3a86f4c5756',
+        'sha1:cc29e241a40752d555347c185a7ff9121e5e4855'
+      } },
+    {
+      'CommonsBase_Std', '2.5.202605150422', {
+        'blake2b-256:25f763540568e6d87af58631144cd65c0f12cf11a10ffad7a0b89aabe3e11763',
+        'sha256:4da972429606075efb05c6859fa7b9b68c0a6346f5d5f21d2aa5d303330b053a',
+        'sha1:3c920d3174b29146528fc30e07ec1ffb6ce4fbac'
+      } } }
+
+## Assets
+
+### CommonsBase_FileMagic.File.Apparatus@7.8.0
+
+  % unified.asset { name="CompatHeader", file="assets/compat/include/filemagic_compat.h" }
+  'asset'
+  '1484'
+  'sha256:09e76c367143c954fe30ee04def30ca570c65bcbc786e3fd02d4065b83f3c3a1'
+
+  % unified.asset { name="CompatErr", file="assets/compat/include/err.h" }
+  'asset'
+  '453'
+  'sha256:b96af0bb2ffd44799b6aaa0cdaf735ea14ae05b19d4396991447604940b61886'
+
+  % unified.asset { name="CompatRegex", file="assets/compat/include/regex.h" }
+  'asset'
+  '957'
+  'sha256:2c3ea2badb4f288dac8ecabf8440e124aeeb3e05e6a71c6627a42371b1c0fd42'
+
+  % unified.asset { name="CompatCdefs", file="assets/compat/include/sys/cdefs.h" }
+  'asset'
+  '484'
+  'sha256:bc800300201928cbf07a55659623ca77ea1d763fab0595b28161a0c1bd27ae58'
+
+  % unified.asset { name="CompatQueue", file="assets/compat/include/sys/queue.h" }
+  'asset'
+  '21463'
+  'sha256:2467348c92f2130ad4ffa70eb973c13326fedf08ca0658bed17f0138bc2795cc'
+
+  % unified.asset { name="CompatTree", file="assets/compat/include/sys/tree.h" }
+  'asset'
+  '33827'
+  'sha256:cbbe65854ef9ee5ec400aa4127c4d87f0a4ed27e699cbdbe92d7db005842f793'
+
+  % unified.asset { name="CompatNull", file="assets/compat/include/sys/_null.h" }
+  'asset'
+  '117'
+  'sha256:700d104dfa19f5707fd4ad70dfa3068641973077eab8c523ec0af34402ca7151'
+
+  % unified.asset { name="CompatVisHeader", file="assets/compat/include/vis.h" }
+  'asset'
+  '3504'
+  'sha256:b4dd8848fc32d064c5b364005385be3bd5ab12ae931ff89b0eca5eb21ffbfaaf'
+
+  % unified.asset { name="CompatSource", file="assets/compat/src/filemagic_compat.c" }
+  'asset'
+  '4590'
+  'sha256:aa94ca19c0960ddb2815ef558d3e58b62232b066d8e5bc50d3eb28c5a066f35c'
+
+  % unified.asset { name="CompatRegexSource", file="assets/compat/src/regex_compat.cpp" }
+  'asset'
+  '3911'
+  'sha256:f46debff0565159bb48d21caafb34340dbf48bc84751d2684590f020028b7340'
+
+  % unified.asset { name="CompatVisSource", file="assets/compat/src/vis.c" }
+  'asset'
+  '6292'
+  'sha256:3ebefacff0b48b6c0002ea34bc1a4471720c2d244a679f676d072178718e4a4a'
+
+  % unified.asset { name="PortableMain", file="assets/src/filemagic_portable_main.c" }
+  'asset'
+  '9565'
+  'sha256:f1359a8c4c2918953de2354e785acb33278eeb8d0c49e7745602f02485a78110'
+
+  % unified.asset { name="PortableXmalloc", file="assets/src/filemagic_portable_xmalloc.c" }
+  'asset'
+  '1474'
+  'sha256:b02a1077115f6e53f383cd9b11c892d6477ef4c887567136c454d57932578a36'
+
+  % unified.asset { name="EmbeddedMagicHeader", file="assets/src/filemagic_embedded_magic.h" }
+  'asset'
+  '266'
+  'sha256:275eff802625b17818f7e4459b9b4f34d4f8a0cc5fc1ccabf7f8096881a8548f'
+
+  % unified.asset { name="EmbeddedMagicSource", file="assets/src/filemagic_embedded_magic.c" }
+  'asset'
+  '3630023'
+  'sha256:ff4dfea9713f4730a9a6c234adf8e5f9d307e10df7277954ccfb67ec39397db1'

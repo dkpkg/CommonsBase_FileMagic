@@ -1,0 +1,8 @@
+# Distribution for Darwin arm64 CommonsBase_FileMagic
+
+## OpenBSD file(1)
+
+  $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.Darwin_arm64 -d ${RUNTIME}/Darwin_arm64-File-7.8.0
+  \test(pass)\dkobjects\;{
+    "Release.Darwin_arm64": "?"
+  }

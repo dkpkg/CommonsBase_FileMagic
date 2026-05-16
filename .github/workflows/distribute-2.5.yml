@@ -1,0 +1,53 @@
+name: CommonsBase_FileMagic@2.5.x
+on:
+  push:
+    tags:
+      - '2.5.*' # build if tag is pushed
+  workflow_dispatch: # allow manual triggering from GitHub Actions page
+
+jobs:
+    distribute:
+        runs-on: ubuntu-latest # or windows-latest or macos-latest
+        if: github.ref_type == 'tag' && startsWith(github.ref_name, '2.5.')
+        permissions:
+          id-token: write
+          contents: write # for action-gh-release
+          attestations: write
+
+        # The secrets created by `dk0/dk0 prepare-version --ci github VERSION`
+        # are tied to this `dk-distribution` environment only.
+        environment: dk-distribution
+        steps:
+            - name: Harden Runner # Optional but recommended
+              uses: step-security/harden-runner@c6295a65d1254861815972266d5933fd6e532bdf # v2.11.1
+              with: { egress-policy: audit }
+
+            - name: Checkout project
+              uses: actions/checkout@v5
+
+            - name: Distribute Modules
+              uses: diskuv/dk-distribute@v1
+              with:
+                  id: CommonsBase_FileMagic@${{ github.ref_name }}
+                  # faster but less safe?   use-cache: true
+                  pubkey: ${{ secrets.distribute_2_5_pubkey }}
+                  seckey: ${{ secrets.distribute_2_5_seckey }}
+# CHANGE THE `slots` FIELD!
+#                 vvvvvvvv
+                  slots: |
+                    Debug.Agnostic
+                    Release.Agnostic
+# CHANGE THE `forms` FIELD!
+#                 vvvvvvvv
+                  forms: |
+                    CommonsBase_FileMagic.Change.Me.Including.Version@1.2.3
+                    CommonsBase_FileMagic.This.Should.Be.One.Of.Your.Forms@4.5.6
+
+            - name: Generate artifact attestation
+              id: attest
+              uses: actions/attest-build-provenance@v3
+              with: { subject-path: dk-dist/* }
+
+            - name: Release ${{ github.workflow }}
+              uses: softprops/action-gh-release@f38efdea4c5ffe13e9424b0aa2833bee28f1e34c # v2. Oct. 6, 2025
+              with: { files: dk-dist/* }

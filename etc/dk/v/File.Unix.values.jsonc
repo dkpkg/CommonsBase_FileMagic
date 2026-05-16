@@ -1,0 +1,178 @@
+// OpenBSD file(1) built for Darwin and Linux using the OpenBSD 7.8 src.tar.gz sources.
+{
+    "$schema": "https://github.com/diskuv/dk/raw/refs/heads/V2_5/etc/jsonschema/dk-values.json",
+    "schema_version": {
+        "major": 1,
+        "minor": 0
+    },
+    "forms": [
+        {
+            "id": "CommonsBase_FileMagic.File.Unix@7.8.0",
+            "precommands": {
+                "sequential": true,
+                "private": [
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatHeader@7.8.0 -p assets/compat/include/filemagic_compat.h -f compat/include/filemagic_compat.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatNull@7.8.0 -p assets/compat/include/sys/_null.h -f compat/include/sys/_null.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatQueue@7.8.0 -p assets/compat/include/sys/queue.h -f compat/include/sys/queue.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatTree@7.8.0 -p assets/compat/include/sys/tree.h -f compat/include/sys/tree.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatVisHeader@7.8.0 -p assets/compat/include/vis.h -f compat/include/vis.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatSource@7.8.0 -p assets/compat/src/filemagic_compat.c -f compat/src/filemagic_compat.c",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.CompatVisSource@7.8.0 -p assets/compat/src/vis.c -f compat/src/vis.c",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.PortableMain@7.8.0 -p assets/src/filemagic_portable_main.c -f portable/filemagic_portable_main.c",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.PortableXmalloc@7.8.0 -p assets/src/filemagic_portable_xmalloc.c -f portable/filemagic_portable_xmalloc.c",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.EmbeddedMagicHeader@7.8.0 -p assets/src/filemagic_embedded_magic.h -f portable/filemagic_embedded_magic.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.EmbeddedMagicSource@7.8.0 -p assets/src/filemagic_embedded_magic.c -f portable/filemagic_embedded_magic.c"
+                ]
+            },
+            "function": {
+                "commands": [
+                    [
+                        "/usr/bin/tar",
+                        "-xzf",
+                        "$(get-asset CommonsBase_FileMagic.File.Bundle@7.8.0 -p src.tar.gz -f src.tar.gz)",
+                        "usr.bin/file"
+                    ],
+                    [
+                        "$(get-object CommonsBase_Std.Coreutils@0.6.0 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f coreutils.exe -e '*')",
+                        "mkdir", "-p", "${SLOTABS.Release.Darwin_arm64}/bin"
+                    ],
+                    [
+                        "/usr/bin/clang",
+                        "-D_GNU_SOURCE",
+                        "-include", "compat/include/filemagic_compat.h",
+                        "-Icompat/include",
+                        "-Iportable",
+                        "-Iusr.bin/file",
+                        "-arch", "arm64",
+                        "-o", "${SLOTABS.Release.Darwin_arm64}/bin/file.exe",
+                        "portable/filemagic_portable_main.c",
+                        "portable/filemagic_embedded_magic.c",
+                        "portable/filemagic_portable_xmalloc.c",
+                        "compat/src/filemagic_compat.c",
+                        "compat/src/vis.c",
+                        "usr.bin/file/magic-common.c",
+                        "usr.bin/file/magic-dump.c",
+                        "usr.bin/file/magic-load.c",
+                        "usr.bin/file/magic-test.c",
+                        "usr.bin/file/text.c"
+                    ],
+                    [
+                        "$(get-object CommonsBase_Std.Coreutils@0.6.0 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f coreutils.exe -e '*')",
+                        "mkdir", "-p", "${SLOTABS.Release.Darwin_x86_64}/bin"
+                    ],
+                    [
+                        "/usr/bin/clang",
+                        "-D_GNU_SOURCE",
+                        "-include", "compat/include/filemagic_compat.h",
+                        "-Icompat/include",
+                        "-Iportable",
+                        "-Iusr.bin/file",
+                        "-arch", "x86_64",
+                        "-o", "${SLOTABS.Release.Darwin_x86_64}/bin/file.exe",
+                        "portable/filemagic_portable_main.c",
+                        "portable/filemagic_embedded_magic.c",
+                        "portable/filemagic_portable_xmalloc.c",
+                        "compat/src/filemagic_compat.c",
+                        "compat/src/vis.c",
+                        "usr.bin/file/magic-common.c",
+                        "usr.bin/file/magic-dump.c",
+                        "usr.bin/file/magic-load.c",
+                        "usr.bin/file/magic-test.c",
+                        "usr.bin/file/text.c"
+                    ],
+                    [
+                        "$(get-object CommonsBase_Std.Coreutils@0.6.0 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f coreutils.exe -e '*')",
+                        "mkdir", "-p", "${SLOTABS.Release.Linux_x86_64}/bin"
+                    ],
+                    [
+                        "/usr/bin/gcc",
+                        "-D_GNU_SOURCE",
+                        "-static",
+                        "-include", "compat/include/filemagic_compat.h",
+                        "-Icompat/include",
+                        "-Iportable",
+                        "-Iusr.bin/file",
+                        "-m64",
+                        "-o", "${SLOTABS.Release.Linux_x86_64}/bin/file.exe",
+                        "portable/filemagic_portable_main.c",
+                        "portable/filemagic_embedded_magic.c",
+                        "portable/filemagic_portable_xmalloc.c",
+                        "compat/src/filemagic_compat.c",
+                        "compat/src/vis.c",
+                        "usr.bin/file/magic-common.c",
+                        "usr.bin/file/magic-dump.c",
+                        "usr.bin/file/magic-load.c",
+                        "usr.bin/file/magic-test.c",
+                        "usr.bin/file/text.c"
+                    ],
+                    [
+                        "$(get-object CommonsBase_Std.Coreutils@0.6.0 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f coreutils.exe -e '*')",
+                        "mkdir", "-p", "${SLOTABS.Release.Linux_x86}/bin"
+                    ],
+                    [
+                        "/usr/bin/gcc",
+                        "-D_GNU_SOURCE",
+                        "-static",
+                        "-include", "compat/include/filemagic_compat.h",
+                        "-Icompat/include",
+                        "-Iportable",
+                        "-Iusr.bin/file",
+                        "-m32",
+                        "-o", "${SLOTABS.Release.Linux_x86}/bin/file.exe",
+                        "portable/filemagic_portable_main.c",
+                        "portable/filemagic_embedded_magic.c",
+                        "portable/filemagic_portable_xmalloc.c",
+                        "compat/src/filemagic_compat.c",
+                        "compat/src/vis.c",
+                        "usr.bin/file/magic-common.c",
+                        "usr.bin/file/magic-dump.c",
+                        "usr.bin/file/magic-load.c",
+                        "usr.bin/file/magic-test.c",
+                        "usr.bin/file/text.c"
+                    ],
+                    [
+                        "$(get-object CommonsBase_Std.Coreutils@0.6.0 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f coreutils.exe -e '*')",
+                        "mkdir", "-p", "${SLOTABS.Release.Linux_arm64}/bin"
+                    ],
+                    [
+                        "/usr/bin/aarch64-linux-gnu-gcc",
+                        "-D_GNU_SOURCE",
+                        "-static",
+                        "-include", "compat/include/filemagic_compat.h",
+                        "-Icompat/include",
+                        "-Iportable",
+                        "-Iusr.bin/file",
+                        "-march=armv8-a",
+                        "-o", "${SLOTABS.Release.Linux_arm64}/bin/file.exe",
+                        "portable/filemagic_portable_main.c",
+                        "portable/filemagic_embedded_magic.c",
+                        "portable/filemagic_portable_xmalloc.c",
+                        "compat/src/filemagic_compat.c",
+                        "compat/src/vis.c",
+                        "usr.bin/file/magic-common.c",
+                        "usr.bin/file/magic-dump.c",
+                        "usr.bin/file/magic-load.c",
+                        "usr.bin/file/magic-test.c",
+                        "usr.bin/file/text.c"
+                    ]
+                ]
+            },
+            "outputs": {
+                "assets": [
+                    {
+                        "slots": [
+                            "Release.Darwin_arm64",
+                            "Release.Darwin_x86_64",
+                            "Release.Linux_x86_64",
+                            "Release.Linux_x86",
+                            "Release.Linux_arm64"
+                        ],
+                        "paths": [
+                            "bin/file.exe"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

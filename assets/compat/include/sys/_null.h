@@ -1,0 +1,6 @@
+#ifndef COMMONSBASE_FILEMAGIC_SYS_NULL_H
+#define COMMONSBASE_FILEMAGIC_SYS_NULL_H
+
+#include <stddef.h>
+
+#endif

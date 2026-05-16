@@ -1,0 +1,8 @@
+# Distribution for Windows x86_64 CommonsBase_FileMagic
+
+## OpenBSD file(1)
+
+  $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.Windows_x86_64 -d ${RUNTIME}/Windows_x86_64-File-7.8.0
+  \test(pass)\dkobjects\;{
+    "Release.Windows_x86_64": "o5giqfs3chsqcfoumi6g6sre2nglxuadfmcsbma3t47og45d6bhjq"
+  }
