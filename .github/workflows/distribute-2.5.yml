@@ -155,13 +155,14 @@ jobs:
           fi
           PART='${{ matrix.distscript }}'
           PART="${PART%%.*}"
+          TRUST_ARGS='--trust-local-package CommonsBase_Std --trust-local-package CommonsBase_LLVM'
 
           rm -rf etc/dk/i
-          echo "sh $DK0 --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD update"
-          sh "$DK0" --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD update
+          echo "sh $DK0 --errors-plain -nosysinc -I etc/dk/i $TRUST_ARGS --keys-env DK_BUILD update"
+          sh "$DK0" --errors-plain -nosysinc -I etc/dk/i $TRUST_ARGS --keys-env DK_BUILD update
 
-          echo "sh $DK0 --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$PART --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}"
-          sh "$DK0" --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-"$PART" --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}
+          echo "sh $DK0 --errors-plain -nosysinc -I etc/dk/i $TRUST_ARGS --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$PART --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}"
+          sh "$DK0" --errors-plain -nosysinc -I etc/dk/i $TRUST_ARGS --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-"$PART" --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}
 
           du -sh dk-dist/*
 
@@ -178,7 +179,7 @@ jobs:
           else
             DK0=./dk0
           fi
-          sh "$DK0" --errors-plain -nosysinc -I etc/dk/i --keys-env DK_BUILD query
+          sh "$DK0" --errors-plain -nosysinc -I etc/dk/i --trust-local-package CommonsBase_Std --trust-local-package CommonsBase_LLVM --keys-env DK_BUILD query
 
       - name: Distribute Modules on Windows
         if: ${{ runner.os == 'Windows' }}
@@ -190,16 +191,17 @@ jobs:
         run: |
           $part = '${{ matrix.distscript }}'
           $part = $part.Substring(0, $part.LastIndexOf('.'))
+          $trustArgs = @('--trust-local-package', 'CommonsBase_Std', '--trust-local-package', 'CommonsBase_LLVM')
           if (Test-Path etc/dk/i) { Remove-Item -Recurse -Force etc/dk/i }
 
-          Write-Host ".\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --keys-env DK_BUILD update"
-          .\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --keys-env DK_BUILD update
+          Write-Host ".\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --trust-local-package CommonsBase_Std --trust-local-package CommonsBase_LLVM --keys-env DK_BUILD update"
+          .\dk0.cmd --errors-plain -nosysinc -I etc\dk\i @trustArgs --keys-env DK_BUILD update
           if ($LASTEXITCODE -ne 0) {
             throw "dk0 update failed with exit code $LASTEXITCODE"
           }
 
-          Write-Host ".\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$part --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}"
-          .\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$part --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}
+          Write-Host ".\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --trust-local-package CommonsBase_Std --trust-local-package CommonsBase_LLVM --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$part --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}"
+          .\dk0.cmd --errors-plain -nosysinc -I etc\dk\i @trustArgs --keys-env DK_BUILD --verbose distribute CommonsBase_FileMagic-$part --library CommonsBase_FileMagic@${{ github.ref_name }} ${{ matrix.distscript }}
           if ($LASTEXITCODE -ne 0) {
             throw "dk0 distribute failed with exit code $LASTEXITCODE"
           }
@@ -218,7 +220,7 @@ jobs:
           DK_BUILD_SECKEY: "${{ secrets.distribute_2_5_seckey }}"
           OCAMLRUNPARAM: b
         run: |
-          .\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --keys-env DK_BUILD query
+          .\dk0.cmd --errors-plain -nosysinc -I etc\dk\i --trust-local-package CommonsBase_Std --trust-local-package CommonsBase_LLVM --keys-env DK_BUILD query
           if ($LASTEXITCODE -ne 0) {
             throw "dk0 query failed with exit code $LASTEXITCODE"
           }
