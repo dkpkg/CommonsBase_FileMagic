@@ -12,6 +12,7 @@
 #include <unistd.h>
 #endif
 
+#ifndef __APPLE__
 size_t
 strlcpy(char *dst, const char *src, size_t dsize)
 {
@@ -143,6 +144,7 @@ getline(char **lineptr, size_t *n, FILE *stream)
     (*lineptr)[len] = '\0';
     return (ssize_t)len;
 }
+#endif
 
 #ifdef _WIN32
 char *

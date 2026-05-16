@@ -33,8 +33,8 @@
 
   % unified.asset { name="CompatHeader", file="assets/compat/include/filemagic_compat.h" }
   'asset'
-  '1484'
-  'sha256:09e76c367143c954fe30ee04def30ca570c65bcbc786e3fd02d4065b83f3c3a1'
+  '1832'
+  'sha256:505d7d651572531d43b58a8700a900487bd24841c8bdbf66aac4f02ab8f99d92'
 
   % unified.asset { name="CompatErr", file="assets/compat/include/err.h" }
   'asset'
@@ -73,8 +73,8 @@
 
   % unified.asset { name="CompatSource", file="assets/compat/src/filemagic_compat.c" }
   'asset'
-  '4590'
-  'sha256:aa94ca19c0960ddb2815ef558d3e58b62232b066d8e5bc50d3eb28c5a066f35c'
+  '4617'
+  'sha256:42650a0e46d639e8fa527fab9dd58b6929a8a5226799a46e35c6cb79531d353f'
 
   % unified.asset { name="CompatRegexSource", file="assets/compat/src/regex_compat.cpp" }
   'asset'

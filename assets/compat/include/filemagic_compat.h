@@ -53,6 +53,15 @@ le64toh(uint64_t value)
 {
     return value;
 }
+#elif defined(__APPLE__)
+#include <libkern/OSByteOrder.h>
+
+#define be16toh OSSwapBigToHostInt16
+#define be32toh OSSwapBigToHostInt32
+#define be64toh OSSwapBigToHostInt64
+#define le16toh OSSwapLittleToHostInt16
+#define le32toh OSSwapLittleToHostInt32
+#define le64toh OSSwapLittleToHostInt64
 #endif
 
 #ifndef __unused
@@ -61,6 +70,10 @@ le64toh(uint64_t value)
 
 #ifndef __dead
 #define __dead __attribute__((noreturn))
+#endif
+
+#ifndef DEF_WEAK
+#define DEF_WEAK(x)
 #endif
 
 size_t strlcpy(char *dst, const char *src, size_t dsize);
