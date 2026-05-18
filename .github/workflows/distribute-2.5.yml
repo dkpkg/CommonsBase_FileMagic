@@ -270,8 +270,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
+      - name: Download distribution artifacts
+        uses: actions/download-artifact@v5
+        with:
+          pattern: distribution-*
+          path: dk-dist
+          merge-multiple: true
+
       - name: Combine Modules
-        uses: diskuv/dk-distribute/combine@v2
+        shell: bash
+        run: |
+          sh ./dk0 --errors-plain -nosysinc -I etc/dk/i --verbose combine \
+            --origin-name CommonsBase_FileMagic \
+            --mirror '${{ github.server_url }}/${{ github.repository }}/releases/download/${{ github.ref_name }}'
+
+          du -sh dk-dist/*
 
       - name: Attest
         id: attest
