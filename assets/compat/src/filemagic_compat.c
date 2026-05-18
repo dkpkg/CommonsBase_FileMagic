@@ -51,7 +51,9 @@ strlcat(char *dst, const char *src, size_t dsize)
     }
     return dstlen + srclen;
 }
+#endif
 
+#if defined(__APPLE__) || defined(_WIN32)
 void *
 reallocarray(void *ptr, size_t nmemb, size_t size)
 {
@@ -61,7 +63,9 @@ reallocarray(void *ptr, size_t nmemb, size_t size)
     }
     return realloc(ptr, nmemb * size);
 }
+#endif
 
+#ifndef __APPLE__
 int
 vasprintf(char **strp, const char *fmt, va_list ap)
 {

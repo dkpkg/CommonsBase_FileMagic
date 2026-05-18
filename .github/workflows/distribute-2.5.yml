@@ -63,9 +63,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Prepare Linux_x86 multilib toolchain
-        if: ${{ matrix.distscript == 'dist-Linux_x86.u' }}
-        run: dnf install -y glibc-devel.i686 libgcc.i686 libstdc++.i686 gcc-toolset-14-libstdc++-devel.i686
+      - name: Prepare Linux static toolchain
+        if: ${{ runner.os == 'Linux' }}
+        shell: bash
+        run: |
+          pkgs=(glibc-static)
+          if [ "${{ matrix.distscript }}" = 'dist-Linux_x86.u' ]; then
+            pkgs+=(glibc-static.i686 glibc-devel.i686 libgcc.i686 libstdc++.i686 gcc-toolset-14-libstdc++-devel.i686)
+          fi
+          dnf install -y "${pkgs[@]}"
 
       - name: Check if bwrap available for sandboxing
         id: check-bwrap
