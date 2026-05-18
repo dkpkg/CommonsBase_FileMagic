@@ -4,5 +4,5 @@
 
   $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.Darwin_arm64 -d ${RUNTIME}/Darwin_arm64-File-7.8.0
   \test(pass)\dkobjects\;{
-    "Release.Darwin_arm64": "?"
+    "Release.Darwin_arm64": "oh6qrcjovcgst4tu736ujgvbfwluomfyzcshtdfw6cmua7l6zkmnq"
   }
