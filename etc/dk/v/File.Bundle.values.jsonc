@@ -14,16 +14,16 @@
                     {
                         "name": "openbsd-7.8-src",
                         "mirrors": [
-                            "https://mirror.aarnet.edu.au/pub/OpenBSD/7.8",
-                            "https://openbsd.c3sl.ufpr.br/pub/OpenBSD/7.8",
                             "https://ftp.OpenBSD.org/pub/OpenBSD/7.8",
+                            "https://mirror.aarnet.edu.au/pub/OpenBSD/7.8",
                             "https://ftp.fr.openbsd.org/pub/OpenBSD/7.8",
                             "https://ftp.fau.de/pub/OpenBSD/7.8",
                             "https://ftp.jaist.ac.jp/pub/OpenBSD/7.8",
                             "https://mirror.freedif.org/pub/OpenBSD/7.8",
                             "https://ftp.nluug.nl/pub/OpenBSD/7.8",
                             "https://mirror.ox.ac.uk/pub/OpenBSD/7.8",
-                            "https://mirrors.ocf.berkeley.edu/pub/OpenBSD/7.8"
+                            "https://mirrors.ocf.berkeley.edu/pub/OpenBSD/7.8",
+                            "https://openbsd.c3sl.ufpr.br/pub/OpenBSD/7.8"
                         ]
                     }
                 ]
