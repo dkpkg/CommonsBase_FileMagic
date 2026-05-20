@@ -5,16 +5,16 @@
   'import'
   'github-l2'
   { {
-      'CommonsBase_LLVM', '2.5.202605151454', {
-        'blake2b-256:533b8ac7c309b980246b5c6d4416d6abd975cfaebab5bcbc3feefe8b7a0fb364',
-        'sha256:068bb28d9832ba3cd66c3220c178eec75b40b9bfb18a2fd55382a3a86f4c5756',
-        'sha1:cc29e241a40752d555347c185a7ff9121e5e4855'
+      'CommonsBase_LLVM', '2.5.202605181210', {
+        'blake2b-256:296716f32edeeb420de5d0560cf09e601e95e72e374355d97e674f0e2e5ba0a6',
+        'sha256:e827a2eecea75455793a9a40cf47352e8e4bd9f5600b78314dc97c8303217277',
+        'sha1:fde1c4bca2b912a4e9d9399cdc930195ff4d8420'
       } },
     {
-      'CommonsBase_Std', '2.5.202605150422', {
-        'blake2b-256:25f763540568e6d87af58631144cd65c0f12cf11a10ffad7a0b89aabe3e11763',
-        'sha256:4da972429606075efb05c6859fa7b9b68c0a6346f5d5f21d2aa5d303330b053a',
-        'sha1:3c920d3174b29146528fc30e07ec1ffb6ce4fbac'
+      'CommonsBase_Std', '2.5.202605180933', {
+        'blake2b-256:8568a48effe148afdd75f250eef23e332efd9458cd9962fe15cd6a4b5ccf02c1',
+        'sha256:20a4122db20e6cacd9be8710c55b12200c0081f12483dda3dfb7c70baeebf414',
+        'sha1:fa211d0ada9bc3fc387422e108c6dd569e32ffcd'
       } } }
 
 ## Assets
@@ -63,8 +63,8 @@
 
   % unified.asset { name="CompatSource", file="assets/compat/src/filemagic_compat.c" }
   'asset'
-  '4366'
-  'sha256:33a0881108e88db932efbb9d59f53ca7fee354d9f289c0f7b80aafb50fdc0139'
+  '4440'
+  'sha256:0c5783c073bd13f7091fd3c175000014bfb272354f90d087ec46b4bb0b089ec3'
 
   % unified.asset { name="CompatRegexSource", file="assets/compat/src/regex_compat.cpp" }
   'asset'
