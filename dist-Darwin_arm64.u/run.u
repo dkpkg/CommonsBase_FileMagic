@@ -13,9 +13,8 @@ The first test which succeeds causes the file type to be printed. The type will 
 The object is bin/file.exe compiled for the ABI.
 
   $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.Darwin_arm64 -d ${RUNTIME}/Darwin_arm64-File-7.8.0
-  \test(pass)\dkobjects\;{
-    "Release.Darwin_arm64": "oh6qrcjovcgst4tu736ujgvbfwluomfyzcshtdfw6cmua7l6zkmnq"
-  }
+  \test(pass)
+  \dkobject(abi: "Release.Darwin_arm64", value_id: "oh6qrcjovcgst4tu736ujgvbfwluomfyzcshtdfw6cmua7l6zkmnq")\;
 
 Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
 the executable was compiled for.

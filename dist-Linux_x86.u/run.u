@@ -13,9 +13,8 @@ The first test which succeeds causes the file type to be printed. The type will 
 The object is bin/file.exe compiled for the ABI.
 
   $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.Linux_x86 -d ${RUNTIME}/Linux_x86-File-7.8.0
-  \test(pass)\dkobjects\;{
-    "Release.Linux_x86": "oktl2mgo7pwcviw2l35nebq6n4dkpwptqop3pohes5iqwx6xisfta"
-  }
+  \test(pass)
+  \dkobject(abi: "Release.Linux_x86", value_id: "oktl2mgo7pwcviw2l35nebq6n4dkpwptqop3pohes5iqwx6xisfta")\;
 
 Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
 the executable was compiled for.
