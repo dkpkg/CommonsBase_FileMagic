@@ -14,13 +14,13 @@ The object is bin/file.exe compiled for the ABI.
 
   $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.Windows_x86 -d ${RUNTIME}/Windows_x86-File-7.8.0
   \test(pass)
-  \dkobject(abi: "Release.Windows_x86", value-id: "o2mk72hfaxgiii7bh6j4rfu4duxibknvjqxj76p7jfegniqp2nzzq")\;
+  \dk.object(abi: "Release.Windows_x86", value-id: "o2mk72hfaxgiii7bh6j4rfu4duxibknvjqxj76p7jfegniqp2nzzq")\;
 
 Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
 the executable was compiled for.
 
   $ run-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
-  >   -b $(get-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -d : -e file.exe)/bin/file.exe
+  >   -b $(get-object CommonsBase_FileMagic.File@7.8.0 -s Release.target_abi -d : -e file.exe)/bin/file.exe
   \test(pass)
-  \execution(abi: "Windows_x86")[MS-DOS executable PE  for MS Windows (console) Intel 80386 32-bit
-  ][]\;
+  \dk.target(abi: "Windows_x86")[MS-DOS executable PE  for MS Windows (console) Intel 80386 32-bit
+  ]\;

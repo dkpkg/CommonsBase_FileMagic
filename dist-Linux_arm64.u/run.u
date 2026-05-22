@@ -14,13 +14,13 @@ The object is bin/file.exe compiled for the ABI.
 
   $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.Linux_arm64 -d ${RUNTIME}/Linux_arm64-File-7.8.0
   \test(pass)
-  \dkobject(abi: "Release.Linux_arm64", value-id: "o5avhm2mcs3q527pe3vv5yownl2orfxu7ak3bpy7kvjve5iwpr6gq")\;
+  \dk.object(abi: "Release.Linux_arm64", value-id: "o5avhm2mcs3q527pe3vv5yownl2orfxu7ak3bpy7kvjve5iwpr6gq")\;
 
 Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
 the executable was compiled for.
 
   $ run-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
-  >   -b $(get-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -d : -e file.exe)/bin/file.exe
+  >   -b $(get-object CommonsBase_FileMagic.File@7.8.0 -s Release.target_abi -d : -e file.exe)/bin/file.exe
   \test(pass)
-  \execution(abi: "Linux_arm64")[ELF 64-bit LSB executable, aarch64, version 1
-  ][]\;
+  \dk.target(abi: "Linux_arm64")[ELF 64-bit LSB executable, aarch64, version 1
+  ]\;
