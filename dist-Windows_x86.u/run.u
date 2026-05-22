@@ -2,7 +2,23 @@
 
 ## OpenBSD file(1)
 
+The file utility tests each argument and attempts to determine its type. Three sets of tests are performed:
+
+1. Filesystem tests, for example if a file is empty, or a special file such as a socket or named pipe (FIFO).
+2. “Magic” tests for data in particular fixed formats. These are loaded from the /etc/magic file (or ~/.magic instead if it exists and file is not running as root). The file format is described in magic(5).
+3. Tests for text files such as plain ASCII or C programming language files.
+
+The first test which succeeds causes the file type to be printed. The type will often contain one of the words text (contains only printing characters and is probably safe to read on an ASCII terminal), executable (the file contains a compiled executable program) or data meaning anything else.
+
+The object is bin/file.exe compiled for the ABI.
+
   $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.Windows_x86 -d ${RUNTIME}/Windows_x86-File-7.8.0
   \test(pass)\dkobjects\;{
     "Release.Windows_x86": "o2mk72hfaxgiii7bh6j4rfu4duxibknvjqxj76p7jfegniqp2nzzq"
   }
+
+Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
+the executable was compiled for.
+
+  $ run-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
+  >   -b $(get-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -d : -e file.exe)/bin/file.exe
