@@ -21,3 +21,6 @@ the executable was compiled for.
 
   $ run-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
   >   -b $(get-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -d : -e file.exe)/bin/file.exe
+  \test(pass)
+  \execution(abi: "Linux_x86")[ELF 32-bit LSB executable, Intel 80386, version 1
+  ][]\;
