@@ -14,7 +14,7 @@ The object is bin/file.exe compiled for the ABI.
 
   $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.Linux_x86_64 -d ${RUNTIME}/Linux_x86_64-File-7.8.0
   \test(pass)
-  \dkobject(abi: "Release.Linux_x86_64", value_id: "opl3mcwh66pcldnkbb2h5uczowcpuzo2r2o6uko6hh5uacpxjsnza")\;
+  \dkobject(abi: "Release.Linux_x86_64", value-id: "opl3mcwh66pcldnkbb2h5uczowcpuzo2r2o6uko6hh5uacpxjsnza")\;
 
 Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
 the executable was compiled for.
