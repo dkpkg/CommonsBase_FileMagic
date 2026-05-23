@@ -20,6 +20,8 @@
                     "get-asset CommonsBase_FileMagic.File.Apparatus.CompatVisSource@7.8.0 -p assets/compat/src/vis.c -f compat/src/vis.c",
                     "get-asset CommonsBase_FileMagic.File.Apparatus.PortableMain@7.8.0 -p assets/src/filemagic_portable_main.c -f portable/filemagic_portable_main.c",
                     "get-asset CommonsBase_FileMagic.File.Apparatus.PortableXmalloc@7.8.0 -p assets/src/filemagic_portable_xmalloc.c -f portable/filemagic_portable_xmalloc.c",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.MagicHeader@7.8.0 -p assets/src/filemagic_magic.h -f portable/magic.h",
+                    "get-asset CommonsBase_FileMagic.File.Apparatus.MagicTestSource@7.8.0 -p assets/src/filemagic_magic_test.c -f portable/filemagic_magic_test.c",
                     "get-asset CommonsBase_FileMagic.File.Apparatus.EmbeddedMagicHeader@7.8.0 -p assets/src/filemagic_embedded_magic.h -f portable/filemagic_embedded_magic.h",
                     "get-asset CommonsBase_FileMagic.File.Apparatus.EmbeddedMagicSource@7.8.0 -p assets/src/filemagic_embedded_magic.c -f portable/filemagic_embedded_magic.c"
                 ]
@@ -55,7 +57,7 @@
                         "usr.bin/file/magic-common.c",
                         "usr.bin/file/magic-dump.c",
                         "usr.bin/file/magic-load.c",
-                        "usr.bin/file/magic-test.c",
+                        "portable/filemagic_magic_test.c",
                         "usr.bin/file/text.c"
                     ],
                     [
@@ -81,7 +83,7 @@
                         "usr.bin/file/magic-common.c",
                         "usr.bin/file/magic-dump.c",
                         "usr.bin/file/magic-load.c",
-                        "usr.bin/file/magic-test.c",
+                        "portable/filemagic_magic_test.c",
                         "usr.bin/file/text.c"
                     ],
                     [
@@ -108,7 +110,7 @@
                         "usr.bin/file/magic-common.c",
                         "usr.bin/file/magic-dump.c",
                         "usr.bin/file/magic-load.c",
-                        "usr.bin/file/magic-test.c",
+                        "portable/filemagic_magic_test.c",
                         "usr.bin/file/text.c"
                     ],
                     [
@@ -135,7 +137,7 @@
                         "usr.bin/file/magic-common.c",
                         "usr.bin/file/magic-dump.c",
                         "usr.bin/file/magic-load.c",
-                        "usr.bin/file/magic-test.c",
+                        "portable/filemagic_magic_test.c",
                         "usr.bin/file/text.c"
                     ],
                     [
@@ -162,7 +164,7 @@
                         "usr.bin/file/magic-common.c",
                         "usr.bin/file/magic-dump.c",
                         "usr.bin/file/magic-load.c",
-                        "usr.bin/file/magic-test.c",
+                        "portable/filemagic_magic_test.c",
                         "usr.bin/file/text.c"
                     ]
                 ]

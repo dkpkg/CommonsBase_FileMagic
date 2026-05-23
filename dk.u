@@ -86,6 +86,16 @@
   '1399'
   'sha256:5dc0a1c17f42bdd11218fb929320ef78f6315cb24f5cebe963a921eb230b7b4d'
 
+  % unified.asset { name="MagicHeader", file="assets/src/filemagic_magic.h" }
+  'asset'
+  '4696'
+  'sha256:bfbc1f77de5b6d6ad4a7815af4f7d2b2ce5d4230ca9afb65beb6d6d8d1d902d6'
+
+  % unified.asset { name="MagicTestSource", file="assets/src/filemagic_magic_test.c" }
+  'asset'
+  '33805'
+  'sha256:ade0e0ef06c39d0b182f63e6b824c26201b0847dbc31838e455dad0c01ca79aa'
+
   % unified.asset { name="EmbeddedMagicHeader", file="assets/src/filemagic_embedded_magic.h" }
   'asset'
   '266'
@@ -93,5 +103,5 @@
 
   % unified.asset { name="EmbeddedMagicSource", file="assets/src/filemagic_embedded_magic.c" }
   'asset'
-  '3638377'
-  'sha256:ce35c61d961fee8c1e3ee48ae3da94db36ea1c5902e8596281c5b0966ed70b0f'
+  '3566995'
+  'sha256:297aa737892d608ea70bc5ca335b10be795939cd5a361631f5c8f80af9200645'

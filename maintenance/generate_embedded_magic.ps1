@@ -17,9 +17,7 @@ files simple: the values forms only need to fetch and compile checked-in assets.
 They do not need to regenerate the blob during object builds.
 
 The generator reads usr.bin/file/magdir from the OpenBSD 7.8 src.tar.gz bundle
-and concatenates files in the same order used by the upstream build. If a
-checked-in override exists under assets/magdir/<name>, that file is used
-instead of the tarball entry for that magdir name:
+and concatenates files in the same order used by the upstream build:
 
 1. Header
 2. Localstuff
@@ -72,7 +70,6 @@ function Resolve-RepoPath {
 
 $tarballPath = Resolve-RepoPath $Tarball
 $outputPath = Resolve-RepoPath $OutputDir
-$overridePath = Join-Path $repoRoot 'assets\magdir'
 $tempRoot = Join-Path $env:TEMP 'CommonsBase_FileMagic-generate_embedded_magic'
 $extractRoot = Join-Path $tempRoot 'extract'
 $magdirPath = Join-Path $extractRoot 'usr.bin\file\magdir'
@@ -113,13 +110,7 @@ $allNames = $orderedNames + $sortedNames
 $builder = New-Object System.Text.StringBuilder
 
 foreach ($name in $allNames) {
-    $overrideFile = Join-Path $overridePath $name
-    $sourceFile =
-        if (Test-Path $overrideFile) {
-            $overrideFile
-        } else {
-            Join-Path $magdirPath $name
-        }
+    $sourceFile = Join-Path $magdirPath $name
 
     if (-not (Test-Path $sourceFile)) {
         throw "Missing magdir source file: $name"
