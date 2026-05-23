@@ -22,5 +22,13 @@ the executable was compiled for.
   $ run-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
   >   -b $(get-object CommonsBase_FileMagic.File@7.8.0 -s Release.target_abi -d : -e file.exe)/bin/file.exe
   \test(pass)
-  \dk.target(abi: "Darwin_arm64")[data
+  \dk.target(abi: "Darwin_arm64")[Mach-O
+ 64-bit
+ executable
+, flags:<
+NOUNDEFS
+|DYLDLINK
+|TWOLEVEL
+|PIE
+>
   ]\;
