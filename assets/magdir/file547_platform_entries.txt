@@ -1,0 +1,19 @@
+# FILE5_47 Magdir entries to overlay onto the OpenBSD 7.8 magdir.
+# Add one basename per line. Blank lines and comments are ignored.
+
+# Windows
+msdos
+
+# Linux and Android
+elf
+linux
+android
+
+# FreeBSD
+freebsd
+
+# macOS and iOS
+mach
+cafebabe
+apple
+macos

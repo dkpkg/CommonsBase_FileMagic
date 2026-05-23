@@ -1,5 +1,7 @@
 // OpenBSD file(1) sources from the OpenBSD 7.8 src.tar.gz release tarball.
-// Test: ./dk0 --trust-local-package CommonsBase_FileMagic --autofix get-bundle CommonsBase_FileMagic.File.Bundle@7.8.0 -d target/filemagic-src
+// The embedded magic database overlays selected FILE5_47 Magdir entries onto
+// the OpenBSD 7.8 magdir.
+// Test: ./dk0 --trust-local-package CommonsBase_FileMagic --autofix get-bundle CommonsBase_FileMagic.File.Bundle@7.8.0+db-5.4.7 -d target/filemagic-src
 {
     "$schema": "https://github.com/diskuv/dk/raw/refs/heads/V2_5/etc/jsonschema/dk-values.json",
     "schema_version": {
@@ -8,7 +10,7 @@
     },
     "bundles": [
         {
-            "id": "CommonsBase_FileMagic.File.Bundle@7.8.0",
+            "id": "CommonsBase_FileMagic.File.Bundle@7.8.0+db-5.4.7",
             "listing": {
                 "origins": [
                     {
@@ -25,6 +27,12 @@
                             "https://mirrors.ocf.berkeley.edu/pub/OpenBSD/7.8",
                             "https://openbsd.c3sl.ufpr.br/pub/OpenBSD/7.8"
                         ]
+                    },
+                    {
+                        "name": "file547-tag",
+                        "mirrors": [
+                            "https://github.com/file/file/archive/refs/tags"
+                        ]
                     }
                 ]
             },
@@ -36,6 +44,14 @@
                         "sha256": "1f20cc61f3b5bc9be69be131f9c897635ca6c3b4eba3a69e938a68e74139f48a"
                     },
                     "size": 222813424
+                },
+                {
+                    "origin": "file547-tag",
+                    "path": "FILE5_47.zip",
+                    "checksum": {
+                        "sha256": "0ff966fe5a44c6e5bce076c68bf64916f04b26efe48150145fb33c328d4d6588"
+                    },
+                    "size": 2509245
                 }
             ]
         }

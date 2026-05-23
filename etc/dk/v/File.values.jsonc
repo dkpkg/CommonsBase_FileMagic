@@ -7,17 +7,17 @@
     },
     "forms": [
         {
-            "id": "CommonsBase_FileMagic.File@7.8.0",
+            "id": "CommonsBase_FileMagic.File@7.8.0+db-5.4.7",
             "precommands": {
                 "private": [
-                    "get-object CommonsBase_FileMagic.File.Unix@7.8.0 -s Release.Darwin_arm64 -d ${SLOT.Release.Darwin_arm64}",
-                    "get-object CommonsBase_FileMagic.File.Unix@7.8.0 -s Release.Darwin_x86_64 -d ${SLOT.Release.Darwin_x86_64}",
-                    "get-object CommonsBase_FileMagic.File.Unix@7.8.0 -s Release.Linux_x86_64 -d ${SLOT.Release.Linux_x86_64}",
-                    "get-object CommonsBase_FileMagic.File.Unix@7.8.0 -s Release.Linux_x86 -d ${SLOT.Release.Linux_x86}",
-                    "get-object CommonsBase_FileMagic.File.Unix@7.8.0 -s Release.Linux_arm64 -d ${SLOT.Release.Linux_arm64}",
-                    "get-object CommonsBase_FileMagic.File.Win32@7.8.0 -s Release.Windows_x86_64 -d ${SLOT.Release.Windows_x86_64}",
-                    "get-object CommonsBase_FileMagic.File.Win32@7.8.0 -s Release.Windows_x86 -d ${SLOT.Release.Windows_x86}",
-                    "get-object CommonsBase_FileMagic.File.Win32@7.8.0 -s Release.Windows_arm64 -d ${SLOT.Release.Windows_arm64}"
+                    "get-object CommonsBase_FileMagic.File.Unix@7.8.0+db-5.4.7 -s Release.Darwin_arm64 -d ${SLOT.Release.Darwin_arm64}",
+                    "get-object CommonsBase_FileMagic.File.Unix@7.8.0+db-5.4.7 -s Release.Darwin_x86_64 -d ${SLOT.Release.Darwin_x86_64}",
+                    "get-object CommonsBase_FileMagic.File.Unix@7.8.0+db-5.4.7 -s Release.Linux_x86_64 -d ${SLOT.Release.Linux_x86_64}",
+                    "get-object CommonsBase_FileMagic.File.Unix@7.8.0+db-5.4.7 -s Release.Linux_x86 -d ${SLOT.Release.Linux_x86}",
+                    "get-object CommonsBase_FileMagic.File.Unix@7.8.0+db-5.4.7 -s Release.Linux_arm64 -d ${SLOT.Release.Linux_arm64}",
+                    "get-object CommonsBase_FileMagic.File.Win32@7.8.0+db-5.4.7 -s Release.Windows_x86_64 -d ${SLOT.Release.Windows_x86_64}",
+                    "get-object CommonsBase_FileMagic.File.Win32@7.8.0+db-5.4.7 -s Release.Windows_x86 -d ${SLOT.Release.Windows_x86}",
+                    "get-object CommonsBase_FileMagic.File.Win32@7.8.0+db-5.4.7 -s Release.Windows_arm64 -d ${SLOT.Release.Windows_arm64}"
                 ]
             },
             "outputs": {

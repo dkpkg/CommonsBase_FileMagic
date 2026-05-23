@@ -12,7 +12,7 @@ The first test which succeeds causes the file type to be printed. The type will 
 
 The object is bin/file.exe compiled for the ABI.
 
-  $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.target_abi -d ${RUNTIME}/File-7.8.0
+  $ get-object CommonsBase_FileMagic.File@7.8.0+db-5.4.7 -s Release.target_abi -d ${RUNTIME}/File-7.8.0+db-5.4.7
   \test(pass)
   \dk.object(abi: "Release.Darwin_arm64", value-id: "oh6qrcjovcgst4tu736ujgvbfwluomfyzcshtdfw6cmua7l6zkmnq")
   \dk.object(abi: "Release.Darwin_x86_64", value-id: "oga2oxtnpuw4azej35eadui6vgs4vfgchylyv5qavqgdgx52ecslq")
@@ -21,33 +21,17 @@ The object is bin/file.exe compiled for the ABI.
   \dk.object(abi: "Release.Linux_x86_64", value-id: "opl3mcwh66pcldnkbb2h5uczowcpuzo2r2o6uko6hh5uacpxjsnza")
   \dk.object(abi: "Release.Windows_arm64", value-id: "o6mkj5ktvpk37xws5fq5cdx77yvlik6jnerpc2xogqqcepd5rftrq")
   \dk.object(abi: "Release.Windows_x86", value-id: "o2mk72hfaxgiii7bh6j4rfu4duxibknvjqxj76p7jfegniqp2nzzq")
-  \dk.object(abi: "Release.Windows_x86_64", value-id: "o5giqfs3chsqcfoumi6g6sre2nglxuadfmcsbma3t47og45d6bhjq")\;
+  \dk.object(abi: "Release.Windows_x86_64", value-id: "oewexexvnre26yr53bb7254y6o6qhm75aqleozlbcjsqfqrhacq3q")\;
 
 Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
 the executable was compiled for.
 
-  $ run-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
-  >   -b $(get-object CommonsBase_FileMagic.File@7.8.0 -s Release.target_abi -d : -e file.exe)/bin/file.exe
+  $ run-object CommonsBase_FileMagic.File@7.8.0+db-5.4.7 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
+  >   -b $(get-object CommonsBase_FileMagic.File@7.8.0+db-5.4.7 -s Release.target_abi -d : -e file.exe)/bin/file.exe
   \test(pass)
-  \dk.target(abi: "Darwin_arm64")[Mach-O 
- 64-bit
- executable
-, flags:<
-NOUNDEFS
-|DYLDLINK
-|TWOLEVEL
-|PIE
->
+  \dk.target(abi: "Darwin_arm64")[Mach-O 64-bit executable , flags:< NOUNDEFS |DYLDLINK |TWOLEVEL |PIE >
   ]
-  \dk.target(abi: "Darwin_x86_64")[Mach-O 
- 64-bit
- executable
-, flags:<
-NOUNDEFS
-|DYLDLINK
-|TWOLEVEL
-|PIE
->
+  \dk.target(abi: "Darwin_x86_64")[Mach-O 64-bit executable , flags:< NOUNDEFS |DYLDLINK |TWOLEVEL |PIE >
   ]
   \dk.target(abi: "Linux_arm64")[ELF 64-bit LSB executable, aarch64, version 1
   ]
@@ -59,5 +43,5 @@ NOUNDEFS
   ]
   \dk.target(abi: "Windows_x86")[MS-DOS executable PE  for MS Windows (console) Intel 80386 32-bit
   ]
-  \dk.target(abi: "Windows_x86_64")[MS-DOS executable PE  for MS Windows (console) Mono/.Net assembly
+  \dk.target(abi: "Windows_x86_64")[PE32+ executable for MS Windows 6.00 (console),, 14 sections
   ]\;
