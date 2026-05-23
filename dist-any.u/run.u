@@ -1,0 +1,64 @@
+# Distribution for CommonsBase_FileMagic
+
+## OpenBSD file(1)
+
+The file utility tests each argument and attempts to determine its type. Three sets of tests are performed:
+
+1. Filesystem tests, for example if a file is empty, or a special file such as a socket or named pipe (FIFO).
+2. “Magic” tests for data in particular fixed formats. These are loaded from the /etc/magic file (or ~/.magic instead if it exists and file is not running as root). The file format is described in magic(5).
+3. Tests for text files such as plain ASCII or C programming language files.
+
+The first test which succeeds causes the file type to be printed. The type will often contain one of the words text (contains only printing characters and is probably safe to read on an ASCII terminal), executable (the file contains a compiled executable program) or data meaning anything else.
+
+The object is bin/file.exe compiled for the ABI.
+
+  $ get-object CommonsBase_FileMagic.File@7.8.0 -s Release.target_abi -d ${RUNTIME}/File-7.8.0
+  \test(pass)
+  \dk.object(abi: "Release.Darwin_arm64", value-id: "oh6qrcjovcgst4tu736ujgvbfwluomfyzcshtdfw6cmua7l6zkmnq")
+  \dk.object(abi: "Release.Darwin_x86_64", value-id: "oga2oxtnpuw4azej35eadui6vgs4vfgchylyv5qavqgdgx52ecslq")
+  \dk.object(abi: "Release.Linux_arm64", value-id: "o5avhm2mcs3q527pe3vv5yownl2orfxu7ak3bpy7kvjve5iwpr6gq")
+  \dk.object(abi: "Release.Linux_x86_64", value-id: "opl3mcwh66pcldnkbb2h5uczowcpuzo2r2o6uko6hh5uacpxjsnza")
+  \dk.object(abi: "Release.Linux_x86", value-id: "oktl2mgo7pwcviw2l35nebq6n4dkpwptqop3pohes5iqwx6xisfta")
+  \dk.object(abi: "Release.Windows_arm64", value-id: "o6mkj5ktvpk37xws5fq5cdx77yvlik6jnerpc2xogqqcepd5rftrq")
+  \dk.object(abi: "Release.Windows_x86_64", value-id: "o5giqfs3chsqcfoumi6g6sre2nglxuadfmcsbma3t47og45d6bhjq")
+  \dk.object(abi: "Release.Windows_x86", value-id: "o2mk72hfaxgiii7bh6j4rfu4duxibknvjqxj76p7jfegniqp2nzzq")
+  \;
+
+Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
+the executable was compiled for.
+
+  $ run-object CommonsBase_FileMagic.File@7.8.0 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
+  >   -b $(get-object CommonsBase_FileMagic.File@7.8.0 -s Release.target_abi -d : -e file.exe)/bin/file.exe
+  \test(pass)
+  \dk.target(abi: "Darwin_arm64")[Mach-O 
+ 64-bit
+ executable
+, flags:<
+NOUNDEFS
+|DYLDLINK
+|TWOLEVEL
+|PIE
+>
+  ]
+  \dk.target(abi: "Darwin_x86_64")[Mach-O 
+ 64-bit
+ executable
+, flags:<
+NOUNDEFS
+|DYLDLINK
+|TWOLEVEL
+|PIE
+>
+  ]
+  \dk.target(abi: "Linux_arm64")[ELF 64-bit LSB executable, aarch64, version 1
+  ]
+  \dk.target(abi: "Linux_x86_64")[ELF 64-bit LSB executable, x86-64, version 1
+  ]
+  \dk.target(abi: "Linux_x86")[ELF 32-bit LSB executable, Intel 80386, version 1
+  ]
+  \dk.target(abi: "Windows_arm64")[MS-DOS executable PE  for MS Windows (console) Mono/.Net assembly
+  ]
+  \dk.target(abi: "Windows_x86_64")[MS-DOS executable PE  for MS Windows (console) Mono/.Net assembly
+  ]
+  \dk.target(abi: "Windows_x86")[MS-DOS executable PE  for MS Windows (console) Intel 80386 32-bit
+  ]\;
