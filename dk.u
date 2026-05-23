@@ -5,16 +5,16 @@
   'import'
   'github-l2'
   { {
-      'CommonsBase_LLVM', '2.5.202605220806', {
-        'blake2b-256:ef1810b8ff671e81eb4d79c6cf722763a91b970dabcbe29ced69a14612ede97d',
-        'sha256:faf2efaedba3c120f50c5c6acf01718a8495e07cfa4dea8a1872b497098194ce',
-        'sha1:946054f1948aa7156d73c6d64c6b65b0af3100a8'
+      'CommonsBase_LLVM', '2.5.202605230522', {
+        'blake2b-256:a0e00bd54b3c86b2e05c71bf3f5104a6167b52fe3cf8e9c0d7c3744536b4101d',
+        'sha256:33f83811b75615660131e128a8e42c23bfd6259d19bb5b7ba679215cb8832c66',
+        'sha1:d8718954bca973cb3e8fa18f75f358c73be2a474'
       } },
     {
-      'CommonsBase_Std', '2.5.202605220656', {
-        'blake2b-256:ea37fa8c3b2c2809c32910eb67e663bf130d55ae489365f40f77a1ca1cfd4c0b',
-        'sha256:d92e9393dfc5841893ba42cc1ca8560e452869ea80f82fabd86fe4516073d2a4',
-        'sha1:6d2e0a26ae6147c70c552a91794b80b1dfe33ca2'
+      'CommonsBase_Std', '2.5.202605230053', {
+        'blake2b-256:45d0f9a049ef179b55e4a4b1adc426d8bcbdaaf8901d9d78b0315b9388f89d3c',
+        'sha256:7f0e42ea1894c4f7108d0c028df48fdd63d528ded76b9b3e195e08f7306d2a67',
+        'sha1:a3d27aedec716fedfd8837f7d4fac419ccd5771e'
       } } }
 
 ## Assets
@@ -93,5 +93,5 @@
 
   % unified.asset { name="EmbeddedMagicSource", file="assets/src/filemagic_embedded_magic.c" }
   'asset'
-  '3630023'
-  'sha256:ff4dfea9713f4730a9a6c234adf8e5f9d307e10df7277954ccfb67ec39397db1'
+  '3638377'
+  'sha256:ce35c61d961fee8c1e3ee48ae3da94db36ea1c5902e8596281c5b0966ed70b0f'
