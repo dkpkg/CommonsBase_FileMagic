@@ -103,5 +103,5 @@
 
   % unified.asset { name="EmbeddedMagicSource", file="assets/src/filemagic_embedded_magic.c" }
   'asset'
-  '3566995'
-  'sha256:297aa737892d608ea70bc5ca335b10be795939cd5a361631f5c8f80af9200645'
+  '4709251'
+  'sha256:0d82380611b8ce6db09e0eefa585ee8719999601e019c7eced7ac9d719b14645'

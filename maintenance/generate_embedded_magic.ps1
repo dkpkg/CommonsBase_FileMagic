@@ -3,8 +3,8 @@
 Generates the checked-in embedded magic database sources.
 
 .DESCRIPTION
-This repository embeds the OpenBSD file(1) magic database directly into
-file.exe instead of shipping a sibling bin/magic file.
+This repository embeds the file(1) magic database directly into file.exe
+instead of shipping a sibling bin/magic file.
 
 The generated outputs are:
 
@@ -16,21 +16,33 @@ source control makes the package build deterministic and keeps the dk values
 files simple: the values forms only need to fetch and compile checked-in assets.
 They do not need to regenerate the blob during object builds.
 
-The generator reads usr.bin/file/magdir from the OpenBSD 7.8 src.tar.gz bundle
-and concatenates files in the same order used by the upstream build:
+The generator starts with `usr.bin/file/magdir` from the OpenBSD 7.8
+`src.tar.gz` bundle, then overlays selected `magic/Magdir/*` entries from the
+upstream file(1) `FILE5_47.zip` listed in a checked-in asset file. It
+concatenates files in the same order used by the upstream build:
 
 1. Header
 2. Localstuff
 3. OpenBSD
 4. All magdir entries whose basename starts with [0-9a-z], sorted by name
 
-Regenerate the checked-in outputs whenever the bundled OpenBSD source tarball
-changes or whenever you intentionally change the embedded-database format.
+Regenerate the checked-in outputs whenever the bundled OpenBSD source tarball,
+the bundled FILE5_47.zip, or the checked-in overlay entry list changes, or
+whenever you intentionally change the embedded-database format.
 
 .PARAMETER Tarball
 Path to the OpenBSD src.tar.gz archive. Relative paths are resolved from the
 repository root. Defaults to target/filemagic-src-local/src.tar.gz, which is the
 local bundle-validation output used during development.
+
+.PARAMETER FileZip
+Path to the upstream FILE5_47.zip archive. Relative paths are resolved from the
+repository root. Defaults to target/filemagic-src-local/FILE5_47.zip, which is
+the local bundle-validation output used during development.
+
+.PARAMETER EntryList
+Path to the checked-in text file that lists the FILE5_47 Magdir basenames to
+overlay onto the OpenBSD magdir.
 
 .PARAMETER OutputDir
 Directory that receives the generated .c and .h files. Relative paths are
@@ -43,13 +55,15 @@ Uses the locally validated bundle tarball and refreshes the checked-in sources.
 
 .EXAMPLE
 powershell -ExecutionPolicy Bypass -File maintenance\generate_embedded_magic.ps1 `
-  -Tarball build\downloads\src.tar.gz
+  -FileZip build\downloads\FILE5_47.zip
 
-Regenerates the checked-in sources from an explicit archive path.
+Regenerates the checked-in sources from an explicit FILE5_47.zip path.
 #>
 [CmdletBinding()]
 param(
     [string]$Tarball = 'target\filemagic-src-local\src.tar.gz',
+    [string]$FileZip = 'target\filemagic-src-local\FILE5_47.zip',
+    [string]$EntryList = 'assets\magdir\file547_platform_entries.txt',
     [string]$OutputDir = 'assets\src'
 )
 
@@ -69,16 +83,29 @@ function Resolve-RepoPath {
 }
 
 $tarballPath = Resolve-RepoPath $Tarball
+$fileZipPath = Resolve-RepoPath $FileZip
+$entryListPath = Resolve-RepoPath $EntryList
 $outputPath = Resolve-RepoPath $OutputDir
 $tempRoot = Join-Path $env:TEMP 'CommonsBase_FileMagic-generate_embedded_magic'
 $extractRoot = Join-Path $tempRoot 'extract'
-$magdirPath = Join-Path $extractRoot 'usr.bin\file\magdir'
+$openBsdRoot = Join-Path $extractRoot 'usr.bin\file'
+$openBsdMagdirPath = Join-Path $openBsdRoot 'magdir'
+$magicRoot = Join-Path $extractRoot 'file-FILE5_47\magic'
+$file547MagdirPath = Join-Path $magicRoot 'Magdir'
 $headerPath = Join-Path $outputPath 'filemagic_embedded_magic.h'
 $sourcePath = Join-Path $outputPath 'filemagic_embedded_magic.c'
 $orderedNames = @('Header', 'Localstuff', 'OpenBSD')
 
 if (-not (Test-Path $tarballPath)) {
     throw "Tarball not found: $tarballPath"
+}
+
+if (-not (Test-Path $fileZipPath)) {
+    throw "FILE5_47.zip not found: $fileZipPath"
+}
+
+if (-not (Test-Path $entryListPath)) {
+    throw "Entry list not found: $entryListPath"
 }
 
 if (-not (Get-Command tar -ErrorAction SilentlyContinue)) {
@@ -93,24 +120,52 @@ New-Item -ItemType Directory -Path $extractRoot -Force | Out-Null
 New-Item -ItemType Directory -Path $outputPath -Force | Out-Null
 
 & tar -xf $tarballPath -C $extractRoot 'usr.bin/file/magdir'
+& tar -xf $fileZipPath -C $extractRoot 'file-FILE5_47/magic'
 
-if (-not (Test-Path $magdirPath)) {
+if (-not (Test-Path $openBsdMagdirPath)) {
     throw "The archive did not contain usr.bin/file/magdir: $tarballPath"
 }
 
-$sortedNames =
-    Get-ChildItem $magdirPath -File |
+if (-not (Test-Path $magicRoot) -or -not (Test-Path $file547MagdirPath)) {
+    throw "The archive did not contain file-FILE5_47/magic: $fileZipPath"
+}
+
+$openBsdSortedNames =
+    Get-ChildItem $openBsdMagdirPath -File |
     # PowerShell -match is case-insensitive, but the upstream build only takes
     # lowercase/decimal magdir entries here.
     Where-Object { $_.Name -cmatch '^[0-9a-z]' } |
     Sort-Object Name |
     Select-Object -ExpandProperty Name
 
-$allNames = $orderedNames + $sortedNames
+$overlayNames =
+    Get-Content $entryListPath |
+    ForEach-Object { $_.Split('#', 2)[0].Trim() } |
+    Where-Object { $_ -ne '' } |
+    Select-Object -Unique
+
+foreach ($name in $overlayNames) {
+    $overlayPath = Join-Path $file547MagdirPath $name
+    if (-not (Test-Path $overlayPath)) {
+        throw "The FILE5_47 archive did not contain overlay entry: $name"
+    }
+}
+
+$allNames = $orderedNames + (
+    @($openBsdSortedNames + $overlayNames) |
+    Sort-Object -Unique
+)
 $builder = New-Object System.Text.StringBuilder
 
 foreach ($name in $allNames) {
-    $sourceFile = Join-Path $magdirPath $name
+    $sourceFile =
+        if ($name -in $orderedNames) {
+            Join-Path $openBsdMagdirPath $name
+        } elseif ($name -in $overlayNames) {
+            Join-Path $file547MagdirPath $name
+        } else {
+            Join-Path $openBsdMagdirPath $name
+        }
 
     if (-not (Test-Path $sourceFile)) {
         throw "Missing magdir source file: $name"
