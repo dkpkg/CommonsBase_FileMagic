@@ -12,22 +12,22 @@ The first test which succeeds causes the file type to be printed. The type will 
 
 The object is bin/file.exe compiled for the ABI.
 
-  $ get-object CommonsBase_FileMagic.File@7.8.0+db-5.4.7 -s Release.target_abi -d ${RUNTIME}/File-7.8.0+db-5.4.7
+  $ get-object CommonsBase_FileMagic.File@7.8.50407 -s Release.target_abi -d ${RUNTIME}/File-7.8.50407
   \test(pass)
-  \dk.object(abi: "Release.Darwin_arm64", value-id: "oyw3vsw5oc6cdt2dgunuxcizw2u3lqykpcofrdbr4o6ss72uk4kmq")
-  \dk.object(abi: "Release.Darwin_x86_64", value-id: "ozek4uffeihi2n3smc3esflqhx5fkrj3st4ptey6ccfc7o7dy5gua")
+  \dk.object(abi: "Release.Darwin_arm64", value-id: "ov6nlp65zuydltckbqla74awjurs6dl6ufpc3kdvjquhyev6jgpia")
+  \dk.object(abi: "Release.Darwin_x86_64", value-id: "oqjiahangkik4zwjjzpaarjgyam24i33j5vfsukns27iknyphhq3q")
   \dk.object(abi: "Release.Linux_arm64", value-id: "o5avhm2mcs3q527pe3vv5yownl2orfxu7ak3bpy7kvjve5iwpr6gq")
-  \dk.object(abi: "Release.Linux_x86", value-id: "orkgdhjpj4mdjlg5vvmtmnrqihewexa6leszf3if2g2gu6fixlmmq")
-  \dk.object(abi: "Release.Linux_x86_64", value-id: "otwdqmzucl7uflwz7thd64r6psimsitekmwci4lso5w2nvlv5ue6q")
-  \dk.object(abi: "Release.Windows_arm64", value-id: "or26jolqa2w2lubev5suwcqly5dnsu3ters7tt4le2vsbose4pr2q")
-  \dk.object(abi: "Release.Windows_x86", value-id: "ojoontuk34slbck7k5g6yh6raznklymqzbdr7hggd3cnznikpvhgq")
-  \dk.object(abi: "Release.Windows_x86_64", value-id: "oewexexvnre26yr53bb7254y6o6qhm75aqleozlbcjsqfqrhacq3q")\;
+  \dk.object(abi: "Release.Linux_x86", value-id: "o6llhj5hnmsabo47ue5kv7bhni7rrqcuasf4ey645tn35khhksmsa")
+  \dk.object(abi: "Release.Linux_x86_64", value-id: "oettb2v2y5ybdy2kvgyalaacxde6xw733dvxypt4vgdgtas2hychq")
+  \dk.object(abi: "Release.Windows_arm64", value-id: "otjn44xwylgros57j6vkuvldaulwwxx3hj3h6vt4auw5xa3s7jwka")
+  \dk.object(abi: "Release.Windows_x86", value-id: "orfckughkjwromzthjfrk4fek4qlgjwr7mxk4fody5tuyq2goebvq")
+  \dk.object(abi: "Release.Windows_x86_64", value-id: "owmbkbff7q7xgwgsybiywh3jrsbqfhptulswvuqrvo22zuf5xbixq")\;
 
 Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
 the executable was compiled for.
 
-  $ run-object CommonsBase_FileMagic.File@7.8.0+db-5.4.7 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
-  >   -b $(get-object CommonsBase_FileMagic.File@7.8.0+db-5.4.7 -s Release.target_abi -d : -e file.exe)/bin/file.exe
+  $ run-object CommonsBase_FileMagic.File@7.8.50407 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
+  >   -b $(get-object CommonsBase_FileMagic.File@7.8.50407 -s Release.target_abi -d : -e file.exe)/bin/file.exe
   \test(pass)
   \dk.target(abi: "Darwin_arm64")[Mach-O 64-bit executable, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|PIE>
   ]
