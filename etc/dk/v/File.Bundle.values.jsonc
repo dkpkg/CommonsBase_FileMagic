@@ -1,7 +1,7 @@
 // OpenBSD file(1) sources from the OpenBSD 7.8 src.tar.gz release tarball.
 // The embedded magic database overlays selected FILE5_47 Magdir entries onto
 // the OpenBSD 7.8 magdir.
-// Test: ./dk0 --trust-local-package CommonsBase_FileMagic --autofix get-bundle CommonsBase_FileMagic.File.Bundle@7.8.0+db-5.4.7 -d target/filemagic-src
+// Test: ./dk0 --trust-local-package CommonsBase_FileMagic --autofix get-bundle CommonsBase_FileMagic.File.Bundle@7.8.50407 -d target/filemagic-src
 {
     "$schema": "https://github.com/diskuv/dk/raw/refs/heads/V2_5/etc/jsonschema/dk-values.json",
     "schema_version": {
@@ -10,7 +10,7 @@
     },
     "bundles": [
         {
-            "id": "CommonsBase_FileMagic.File.Bundle@7.8.0+db-5.4.7",
+            "id": "CommonsBase_FileMagic.File.Bundle@7.8.50407",
             "listing": {
                 "origins": [
                     {

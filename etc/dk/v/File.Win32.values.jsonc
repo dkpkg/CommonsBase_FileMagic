@@ -7,7 +7,7 @@
     },
     "forms": [
         {
-            "id": "CommonsBase_FileMagic.File.Win32@7.8.0+db-5.4.7",
+            "id": "CommonsBase_FileMagic.File.Win32@7.8.50407",
             "precommands": {
                 "sequential": true,
                 "private": [
@@ -46,7 +46,7 @@
                         "x",
                         "-y",
                         "-o.",
-                        "$(get-asset CommonsBase_FileMagic.File.Bundle@7.8.0+db-5.4.7 -p src.tar.gz -f src.tar.gz)",
+                        "$(get-asset CommonsBase_FileMagic.File.Bundle@7.8.50407 -p src.tar.gz -f src.tar.gz)",
                         "src.tar"
                     ],
                     [

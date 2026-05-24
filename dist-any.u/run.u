@@ -12,7 +12,7 @@ The first test which succeeds causes the file type to be printed. The type will 
 
 The object is bin/file.exe compiled for the ABI.
 
-  $ get-object CommonsBase_FileMagic.File@7.8.0+db-5.4.7 -s Release.target_abi -d ${RUNTIME}/File-7.8.0+db-5.4.7
+  $ get-object CommonsBase_FileMagic.File@7.8.50407 -s Release.target_abi -d ${RUNTIME}/File-7.8.50407
   \test(pass)
   \dk.object(abi: "Release.Darwin_arm64", value-id: "oyw3vsw5oc6cdt2dgunuxcizw2u3lqykpcofrdbr4o6ss72uk4kmq")
   \dk.object(abi: "Release.Darwin_x86_64", value-id: "ozek4uffeihi2n3smc3esflqhx5fkrj3st4ptey6ccfc7o7dy5gua")
@@ -26,8 +26,8 @@ The object is bin/file.exe compiled for the ABI.
 Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
 the executable was compiled for.
 
-  $ run-object CommonsBase_FileMagic.File@7.8.0+db-5.4.7 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
-  >   -b $(get-object CommonsBase_FileMagic.File@7.8.0+db-5.4.7 -s Release.target_abi -d : -e file.exe)/bin/file.exe
+  $ run-object CommonsBase_FileMagic.File@7.8.50407 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
+  >   -b $(get-object CommonsBase_FileMagic.File@7.8.50407 -s Release.target_abi -d : -e file.exe)/bin/file.exe
   \test(pass)
   \dk.target(abi: "Darwin_arm64")[Mach-O 64-bit executable, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|PIE>
   ]

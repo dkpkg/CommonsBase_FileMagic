@@ -6,7 +6,7 @@ database overlaid by selected upstream `file` `FILE5_47.zip` Magdir entries.
 
 The main package targets are:
 
-- `CommonsBase_FileMagic.File@7.8.0+db-5.4.7`
+- `CommonsBase_FileMagic.File@7.8.50407`
 
 The output for every supported ABI is:
 
