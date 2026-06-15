@@ -17,6 +17,22 @@
         'sha1:f7dba9f39e2c3685f1b321c37a49756d1321fed3'
       } } }
 
+  %% import { type="github-l2", repo="dkpkg/CommonsBase_Remote" }
+  'import'
+  'github-l2'
+  { {
+      'CommonsBase_Remote', '2.5.202606101535', {
+        'blake2b-256:dfbe84795b13d85f51fa71fd8940939c836b0143646c9b2ecdcd9ed2ea7dd6ad',
+        'sha256:b6c9bb067ede3f85905d5c64416cd1056310427303273c855f450ed8445fbf7f',
+        'sha1:1800afdcf808f483ba955eed43016e2f6cddd931'
+      } },
+    {
+      'CommonsBase_Std', '2.5.202606091420', {
+        'blake2b-256:485d066db44a79855417ab2dc6c026dcb602548c2f50c0cbebf64fc524c1684f',
+        'sha256:a054b5fe2e6eb4eb3cef52d6e83176881bbf30f42573c42b79d960d166b347ad',
+        'sha1:f7dba9f39e2c3685f1b321c37a49756d1321fed3'
+      } } }
+
 ## Assets
 
 ### CommonsBase_FileMagic.File.Apparatus@7.8.0
