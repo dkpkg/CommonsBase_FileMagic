@@ -3,7 +3,7 @@
 // the OpenBSD 7.8 magdir.
 // Test: ./dk0 --trust-local-package CommonsBase_FileMagic --autofix get-bundle CommonsBase_FileMagic.File.Bundle@7.8.50407 -d target/filemagic-src
 {
-    "$schema": "https://github.com/diskuv/dk/raw/refs/heads/V2_5/etc/jsonschema/dk-values.json",
+    "$schema": "https://diskuv.com/dk/schema/dk-value-1.0.json",
     "schema_version": {
         "major": 1,
         "minor": 0
