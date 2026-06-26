@@ -84,7 +84,7 @@ jobs:
             pubkey: ${{ secrets.distribute_2_5_pubkey }}
             seckey: ${{ secrets.distribute_2_5_seckey }}
             options: -nosysinc
-            store: none
+            store: release
             distscript: ${{ matrix.distscript }}
             execution-abi: ${{ matrix.execution-abi }}
             target-abi: ${{ matrix.target-abi }}
