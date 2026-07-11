@@ -1,0 +1,296 @@
+{
+  "bundles": [
+    {
+      "assets": [
+        {
+          "checksum": {
+            "blake2b256": "469f0c1ef3ae1755bbb7fb6d34bbf39bab2f97ab511dc854c7a6c01e2fa0ec62"
+          },
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-linux.distmeta.cts.1.tracestore",
+          "size": 55454
+        },
+        {
+          "checksum": {
+            "blake2b256": "aacbffbda3e560113936ae203cace5a4ef7f95d0f3dc2ed413ac9b243c633acd"
+          },
+          "indexes": [
+            {
+              "type": "zip",
+              "zip": {
+                "local_offset": 0,
+                "central_offset": 28649,
+                "central_size": 413,
+                "checksum": {
+                  "blake2b256": "c6aa766c69cba3e95dbb03320f96ad3d6ae6cdfd25948afedbca007365fde1d8"
+                }
+              }
+            }
+          ],
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-linux.distmeta.valuestore.zip",
+          "size": 29062
+        },
+        {
+          "checksum": {
+            "blake2b256": "0ab8faa0fb56b995ca434714d4eadfe68f66e57bdbd14501235a63196d052220"
+          },
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-linux.package.cts.1.tracestore",
+          "size": 10766
+        },
+        {
+          "checksum": {
+            "blake2b256": "b6392307cf66d5ad6479779ed3f6de96ce29572bc3057870a0b26a86434577a0"
+          },
+          "indexes": [
+            {
+              "type": "zip",
+              "zip": {
+                "local_offset": 0,
+                "central_offset": 1393166601,
+                "central_size": 1148,
+                "checksum": {
+                  "blake2b256": "5e71da8ee7534c7d7007ba7bf9f75527c2ecbf6525001e1d6f44fc728d62514c"
+                }
+              }
+            }
+          ],
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-linux.package.valuestore.zip",
+          "size": 1393167749
+        },
+        {
+          "checksum": {
+            "blake2b256": "469f0c1ef3ae1755bbb7fb6d34bbf39bab2f97ab511dc854c7a6c01e2fa0ec62"
+          },
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-macos.distmeta.cts.1.tracestore",
+          "size": 55454
+        },
+        {
+          "checksum": {
+            "blake2b256": "aacbffbda3e560113936ae203cace5a4ef7f95d0f3dc2ed413ac9b243c633acd"
+          },
+          "indexes": [
+            {
+              "type": "zip",
+              "zip": {
+                "local_offset": 0,
+                "central_offset": 28649,
+                "central_size": 413,
+                "checksum": {
+                  "blake2b256": "c6aa766c69cba3e95dbb03320f96ad3d6ae6cdfd25948afedbca007365fde1d8"
+                }
+              }
+            }
+          ],
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-macos.distmeta.valuestore.zip",
+          "size": 29062
+        },
+        {
+          "checksum": {
+            "blake2b256": "5b19d15b66ea48fab7cc069adaab06e6894147213e4ea87dae985b0a8dc17d3f"
+          },
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-macos.package.cts.1.tracestore",
+          "size": 9203
+        },
+        {
+          "checksum": {
+            "blake2b256": "4f9e21d1f39ebd284ae53ba35bde349eeb2ceb5a00d64c8dbf2e99bb41fdfb23"
+          },
+          "indexes": [
+            {
+              "type": "zip",
+              "zip": {
+                "local_offset": 0,
+                "central_offset": 1585607358,
+                "central_size": 1043,
+                "checksum": {
+                  "blake2b256": "550534102f7d4aa741d67fe248b849a6ceb5f184a039b3e6e54d5a264415f02d"
+                }
+              }
+            }
+          ],
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-macos.package.valuestore.zip",
+          "size": 1585608401
+        },
+        {
+          "checksum": {
+            "blake2b256": "469f0c1ef3ae1755bbb7fb6d34bbf39bab2f97ab511dc854c7a6c01e2fa0ec62"
+          },
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-win32.distmeta.cts.1.tracestore",
+          "size": 55454
+        },
+        {
+          "checksum": {
+            "blake2b256": "aacbffbda3e560113936ae203cace5a4ef7f95d0f3dc2ed413ac9b243c633acd"
+          },
+          "indexes": [
+            {
+              "type": "zip",
+              "zip": {
+                "local_offset": 0,
+                "central_offset": 28649,
+                "central_size": 413,
+                "checksum": {
+                  "blake2b256": "c6aa766c69cba3e95dbb03320f96ad3d6ae6cdfd25948afedbca007365fde1d8"
+                }
+              }
+            }
+          ],
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-win32.distmeta.valuestore.zip",
+          "size": 29062
+        },
+        {
+          "checksum": {
+            "blake2b256": "83515142fa7fc3e765c8fd8ba1f193c5eb5ce0df2ee8c993eed175029e73e799"
+          },
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-win32.package.cts.1.tracestore",
+          "size": 8535
+        },
+        {
+          "checksum": {
+            "blake2b256": "d3ff066852b55592b90aeea7f48ebad66ef325f11fa9dc0a808e3d9414c3e87d"
+          },
+          "indexes": [
+            {
+              "type": "zip",
+              "zip": {
+                "local_offset": 0,
+                "central_offset": 1074687652,
+                "central_size": 938,
+                "checksum": {
+                  "blake2b256": "06a6461cab13eca126db3e36577f7d53e102813716bb1fd6b84a635f0b58daf2"
+                }
+              }
+            }
+          ],
+          "origin": "CommonsBase_LLVM",
+          "path": "CommonsBase_LLVM-win32.package.valuestore.zip",
+          "size": 1074688590
+        }
+      ],
+      "id": "CommonsBase_LLVM.Distribution@0.1.20260706064049",
+      "listing": {
+        "origins": [
+          {
+            "name": "CommonsBase_LLVM",
+            "mirrors": [
+              "https://github.com/dkpkg/CommonsBase_LLVM/releases/download/0.1.20260706064049"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "distributions": [
+    {
+      "build": {
+        "attestation": {
+          "github_slsa_v1_l2": {
+            "docs": [
+              {"mediaType":"application/vnd.dev.sigstore.bundle.v0.3+json","verificationMaterial":{"certificate":{"rawBytes":"MIIHgjCCBwigAwIBAgIUOW1kazmti1KoAd/YprkuFVRY+JcwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNzA2MDY0OTQxWhcNMjYwNzA2MDY1OTQxWjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExcQeadUxt27luaIWYaEc3PVypPULYY4fOXNlX3SCJZk7csf3B7h0EbhTYhUCP/Z+79vfblTxi1nKMkqY5ehJnaOCBicwggYjMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUtBKT3mcXvoWf3MwwIjCCyKUFV7AwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8weQYDVR0RAQH/BG8wbYZraHR0cHM6Ly9naXRodWIuY29tL2RrcGtnL0NvbW1vbnNCYXNlX0xMVk0vLmdpdGh1Yi93b3JrZmxvd3MvZGlzdHJpYnV0ZS0wLjEueW1sQHJlZnMvdGFncy8wLjEuMjAyNjA3MDYwNjQwNDkwOQYKKwYBBAGDvzABAQQraHR0cHM6Ly90b2tlbi5hY3Rpb25zLmdpdGh1YnVzZXJjb250ZW50LmNvbTASBgorBgEEAYO/MAECBARwdXNoMDYGCisGAQQBg78wAQMEKDhhZjdkZTE2M2EyYzliNjAyYzA3YTAyOTFmNTdjZjBiOTNlOGIzNWMwMgYKKwYBBAGDvzABBAQkLmdpdGh1Yi93b3JrZmxvd3MvZGlzdHJpYnV0ZS0wLjEueW1sMCQGCisGAQQBg78wAQUEFmRrcGtnL0NvbW1vbnNCYXNlX0xMVk0wKgYKKwYBBAGDvzABBgQccmVmcy90YWdzLzAuMS4yMDI2MDcwNjA2NDA0OTA7BgorBgEEAYO/MAEIBC0MK2h0dHBzOi8vdG9rZW4uYWN0aW9ucy5naXRodWJ1c2VyY29udGVudC5jb20wewYKKwYBBAGDvzABCQRtDGtodHRwczovL2dpdGh1Yi5jb20vZGtwa2cvQ29tbW9uc0Jhc2VfTExWTS8uZ2l0aHViL3dvcmtmbG93cy9kaXN0cmlidXRlLTAuMS55bWxAcmVmcy90YWdzLzAuMS4yMDI2MDcwNjA2NDA0OTA4BgorBgEEAYO/MAEKBCoMKDhhZjdkZTE2M2EyYzliNjAyYzA3YTAyOTFmNTdjZjBiOTNlOGIzNWMwHQYKKwYBBAGDvzABCwQPDA1naXRodWItaG9zdGVkMDkGCisGAQQBg78wAQwEKwwpaHR0cHM6Ly9naXRodWIuY29tL2RrcGtnL0NvbW1vbnNCYXNlX0xMVk0wOAYKKwYBBAGDvzABDQQqDCg4YWY3ZGUxNjNhMmM5YjYwMmMwN2EwMjkxZjU3Y2YwYjkzZThiMzVjMCwGCisGAQQBg78wAQ4EHgwccmVmcy90YWdzLzAuMS4yMDI2MDcwNjA2NDA0OTAaBgorBgEEAYO/MAEPBAwMCjEyMjI4NzM5ODgwKAYKKwYBBAGDvzABEAQaDBhodHRwczovL2dpdGh1Yi5jb20vZGtwa2cwGQYKKwYBBAGDvzABEQQLDAkyNzg5MTM1MDAwewYKKwYBBAGDvzABEgRtDGtodHRwczovL2dpdGh1Yi5jb20vZGtwa2cvQ29tbW9uc0Jhc2VfTExWTS8uZ2l0aHViL3dvcmtmbG93cy9kaXN0cmlidXRlLTAuMS55bWxAcmVmcy90YWdzLzAuMS4yMDI2MDcwNjA2NDA0OTA4BgorBgEEAYO/MAETBCoMKDhhZjdkZTE2M2EyYzliNjAyYzA3YTAyOTFmNTdjZjBiOTNlOGIzNWMwFAYKKwYBBAGDvzABFAQGDARwdXNoMF0GCisGAQQBg78wARUETwxNaHR0cHM6Ly9naXRodWIuY29tL2RrcGtnL0NvbW1vbnNCYXNlX0xMVk0vYWN0aW9ucy9ydW5zLzI4NzcyOTEwMzM2L2F0dGVtcHRzLzEwFgYKKwYBBAGDvzABFgQIDAZwdWJsaWMwTAYKKwYBBAGDvzABGAQ+DDxyZXBvOmRrcGtnL0NvbW1vbnNCYXNlX0xMVk06cmVmOnJlZnMvdGFncy8wLjEuMjAyNjA3MDYwNjQwNDkwgYoGCisGAQQB1nkCBAIEfAR6AHgAdgDdPTBqxscRMmMZHhyZZzcCokpeuN48rf+HinKALynujgAAAZ82MJSKAAAEAwBHMEUCIQDHJKiQdK8Z84s1NwcnjLrKcT6SDP3b+FU1/NoGwBsWJwIgCtF/AALPnbqLrcpwkonYGjGC8INDfjCYks2QIDrUNPswCgYIKoZIzj0EAwMDaAAwZQIwXUFSlHDMJ8/oAC20nQ4SGozFCrMRxkmPJ/G3a19CaU0EVxSKsrkW/RcW1IGZ7C5cAjEA80W9gdbeddcCxsq3GovG8zID2AfCdYXwbMFe2JjiF/vMxJbz7C9uJI41kAMOZa91"},"tlogEntries":[{"logIndex":"2084232121","logId":{"keyId":"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="},"kindVersion":{"kind":"dsse","version":"0.0.1"},"integratedTime":"1783320581","inclusionPromise":{"signedEntryTimestamp":"MEUCIEUq8HV/aK+wRt2j71RRxl4L+3yTN2ZV45QnwskOhmtgAiEArHhHRd0EscirjTh1CB94O1BYEaqc2dMGtfVVHY+tgrc="},"inclusionProof":{"logIndex":"1962327859","rootHash":"neRLgUgUKWGDON7w0Tj3zwvRuxBIiKE0zYfA374vs5s=","treeSize":"1962327862","hashes":["bqMAdApIuzDEru59d1rs3sskgPXaN62RvWgcfxmhG9E=","0oa7OZv98ybnzb/FBD/wd4E9YVKh6TiZXbZVt89wsYQ=","J++MVpO3ribT/MrVqG6XdLeLiumo7IVOWtVvRtYlab8=","7wtRnFrfMx2iNQMpkFK3/4saQbVrBaXR17IrFsdKjjY=","ShCSOahLPAngqs5RZYtZYVEOrrYc21EsuAkpt4UZ3Gw=","oqf3t5skYRmiW6EOLnbDMRlsqSLXiOnRwA2+SaGHYvc=","kg2Ofj/WdZxfrxTyx8xhI8UKZh7DB7t/eN3GJXIzIbM=","OsnokzwBvxnb77CMd+/HiIhBtyBzHlVxVUreTYl9K0M=","qOUXVT11f7H0p1qTFz2n3SBsotD7cf2tg6rCq3E41L4=","tsq8RA0CjBVHuZhc3LM/oKPFeu3dEPIInciSc1jzZxU=","A/bqd/XmUmOdfGDIjGJ/p3seRatQda56DSaN8mH2HDA=","ikv57mNS5Copz+6Nvxns4z2hsujSl7y3MEagxKLUTWU=","zMQRf5yUuj5fH8w9HDdEB7orUglRDpeveCtGb7IB1RA=","lb2DvAVoyNa/VPHREGFyRYQ3HwggtHKd8UUcaYbQOGg=","tnG59bnbQ8FlPRWotyrgvSU7wB7dzBuf/MTCM1I1k/w=","Zt0FvUoqdwrprG0UnkSrjLeaDEFTSB9l55zstba1x9o=","3B/2YhG9Hq6jWuu0Ex7QuZjMqygyhrG50mhOyrIQz0w=","tDXnjKr2ePPMJraHNMqSq7IihlODxuYiqtZXfZbQeDQ=","cyKMKBvHkQtwb2xR5svh+YppANOVdn7X8t4DuKMxICA=","+/VZ56MsIPxMiyLAodzKXo5TEWdQp36z89qLhpzloAo=","daxmZaajRpZV+JxHiOYZhJBiSKN5ucqjh2WnGbHhirw=","DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU="],"checkpoint":{"envelope":"rekor.sigstore.dev - 1193050959916656506\n1962327862\nneRLgUgUKWGDON7w0Tj3zwvRuxBIiKE0zYfA374vs5s=\n\n— rekor.sigstore.dev wNI9ajBFAiBdQDuPkS5c1KdwFBH6b08QY0RLAYQCtQnmUL4TQgcxKAIhAI68d5BeAlexKtNahsJ1C7HwXMlg8Tldmmz3ta2bzvd3\n"}},"canonicalizedBody":"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiZHNzZSIsInNwZWMiOnsiZW52ZWxvcGVIYXNoIjp7ImFsZ29yaXRobSI6InNoYTI1NiIsInZhbHVlIjoiMzQzYjIyOWExMDBjZjc1NWU4Yjc3NGM1MWY3ZDE2MjZhNTBjOGYzZmYzYWE0MTkzMDE2NTEzNTZhM2E0MmFiNSJ9LCJwYXlsb2FkSGFzaCI6eyJhbGdvcml0aG0iOiJzaGEyNTYiLCJ2YWx1ZSI6ImY3ZGFhNzRmMmZjMTI3MmJmYjAxMjEwMGJlMmY0MGY2N2VkMzU5ZDAwNWM4ZDM5NmY0NThlODgxZGZlNzYxMGUifSwic2lnbmF0dXJlcyI6W3sic2lnbmF0dXJlIjoiTUVVQ0lRRHlFR3h5SVoxcXd1andJRHdSNFVFY0JBSGhZNWpEUjcxNUNSOGVqV0FqcWdJZ2V2SlZzMytXS0RtVDdNVzJ0Z3A1eDZoWGVwMWxIWHZiek9tR2Ryd29UaFE9IiwidmVyaWZpZXIiOiJMUzB0TFMxQ1JVZEpUaUJEUlZKVVNVWkpRMEZVUlMwdExTMHRDazFKU1VobmFrTkRRbmRwWjBGM1NVSkJaMGxWVDFjeGEyRjZiWFJwTVV0dlFXUXZXWEJ5YTNWR1ZsSlpLMHBqZDBObldVbExiMXBKZW1vd1JVRjNUWGNLVG5wRlZrMUNUVWRCTVZWRlEyaE5UV015Ykc1ak0xSjJZMjFWZFZwSFZqSk5ValIzU0VGWlJGWlJVVVJGZUZaNllWZGtlbVJIT1hsYVV6RndZbTVTYkFwamJURnNXa2RzYUdSSFZYZElhR05PVFdwWmQwNTZRVEpOUkZrd1QxUlJlRmRvWTA1TmFsbDNUbnBCTWsxRVdURlBWRkY0VjJwQlFVMUdhM2RGZDFsSUNrdHZXa2w2YWpCRFFWRlpTVXR2V2tsNmFqQkVRVkZqUkZGblFVVjRZMUZsWVdSVmVIUXlOMngxWVVsWFdXRkZZek5RVm5sd1VGVk1XVmswWms5WVRtd0tXRE5UUTBwYWF6ZGpjMll6UWpkb01FVmlhRlJaYUZWRFVDOWFLemM1ZG1aaWJGUjRhVEZ1UzAxcmNWazFaV2hLYm1GUFEwSnBZM2RuWjFscVRVRTBSd3BCTVZWa1JIZEZRaTkzVVVWQmQwbElaMFJCVkVKblRsWklVMVZGUkVSQlMwSm5aM0pDWjBWR1FsRmpSRUY2UVdSQ1owNVdTRkUwUlVablVWVjBRa3RVQ2pOdFkxaDJiMWRtTTAxM2QwbHFRME41UzFWR1ZqZEJkMGgzV1VSV1VqQnFRa0puZDBadlFWVXpPVkJ3ZWpGWmEwVmFZalZ4VG1wd1MwWlhhWGhwTkZrS1drUTRkMlZSV1VSV1VqQlNRVkZJTDBKSE9IZGlXVnB5WVVoU01HTklUVFpNZVRsdVlWaFNiMlJYU1hWWk1qbDBUREpTY21OSGRHNU1NRTUyWWxjeGRncGliazVEV1ZoT2JGZ3dlRTFXYXpCMlRHMWtjR1JIYURGWmFUa3pZak5LY2xwdGVIWmtNMDEyV2tkc2VtUklTbkJaYmxZd1dsTXdkMHhxUlhWbFZ6RnpDbEZJU214YWJrMTJaRWRHYm1ONU9IZE1ha1YxVFdwQmVVNXFRVE5OUkZsM1RtcFJkMDVFYTNkUFVWbExTM2RaUWtKQlIwUjJla0ZDUVZGUmNtRklVakFLWTBoTk5reDVPVEJpTW5Sc1ltazFhRmt6VW5CaU1qVjZURzFrY0dSSGFERlpibFo2V2xoS2FtSXlOVEJhVnpVd1RHMU9kbUpVUVZOQ1oyOXlRbWRGUlFwQldVOHZUVUZGUTBKQlVuZGtXRTV2VFVSWlIwTnBjMGRCVVZGQ1p6YzRkMEZSVFVWTFJHaG9XbXBrYTFwVVJUSk5Na1Y1V1hwc2FVNXFRWGxaZWtFekNsbFVRWGxQVkVadFRsUmthbHBxUW1sUFZFNXNUMGRKZWs1WFRYZE5aMWxMUzNkWlFrSkJSMFIyZWtGQ1FrRlJhMHh0WkhCa1IyZ3hXV2s1TTJJelNuSUtXbTE0ZG1RelRYWmFSMng2WkVoS2NGbHVWakJhVXpCM1RHcEZkV1ZYTVhOTlExRkhRMmx6UjBGUlVVSm5OemgzUVZGVlJVWnRVbkpqUjNSdVREQk9kZ3BpVnpGMlltNU9RMWxZVG14WU1IaE5WbXN3ZDB0bldVdExkMWxDUWtGSFJIWjZRVUpDWjFGalkyMVdiV041T1RCWlYyUjZUSHBCZFUxVE5IbE5SRWt5Q2sxRVkzZE9ha0V5VGtSQk1FOVVRVGRDWjI5eVFtZEZSVUZaVHk5TlFVVkpRa013VFVzeWFEQmtTRUo2VDJrNGRtUkhPWEphVnpSMVdWZE9NR0ZYT1hVS1kzazFibUZZVW05a1Ywb3hZekpXZVZreU9YVmtSMVoxWkVNMWFtSXlNSGRsZDFsTFMzZFpRa0pCUjBSMmVrRkNRMUZTZEVSSGRHOWtTRkozWTNwdmRncE1NbVJ3WkVkb01WbHBOV3BpTWpCMldrZDBkMkV5WTNaUk1qbDBZbGM1ZFdNd1NtaGpNbFptVkVWNFYxUlRPSFZhTW13d1lVaFdhVXd6WkhaamJYUnRDbUpIT1ROamVUbHJZVmhPTUdOdGJHbGtXRkpzVEZSQmRVMVROVFZpVjNoQlkyMVdiV041T1RCWlYyUjZUSHBCZFUxVE5IbE5SRWt5VFVSamQwNXFRVElLVGtSQk1FOVVRVFJDWjI5eVFtZEZSVUZaVHk5TlFVVkxRa052VFV0RWFHaGFhbVJyV2xSRk1rMHlSWGxaZW14cFRtcEJlVmw2UVROWlZFRjVUMVJHYlFwT1ZHUnFXbXBDYVU5VVRteFBSMGw2VGxkTmQwaFJXVXRMZDFsQ1FrRkhSSFo2UVVKRGQxRlFSRUV4Ym1GWVVtOWtWMGwwWVVjNWVtUkhWbXROUkd0SENrTnBjMGRCVVZGQ1p6YzRkMEZSZDBWTGQzZHdZVWhTTUdOSVRUWk1lVGx1WVZoU2IyUlhTWFZaTWpsMFRESlNjbU5IZEc1TU1FNTJZbGN4ZG1KdVRrTUtXVmhPYkZnd2VFMVdhekIzVDBGWlMwdDNXVUpDUVVkRWRucEJRa1JSVVhGRVEyYzBXVmRaTTFwSFZYaE9hazVvVFcxTk5WbHFXWGROYlUxM1RqSkZkd3BOYW10NFdtcFZNMWt5V1hkWmFtdDZXbFJvYVUxNlZtcE5RM2RIUTJselIwRlJVVUpuTnpoM1FWRTBSVWhuZDJOamJWWnRZM2s1TUZsWFpIcE1la0YxQ2sxVE5IbE5SRWt5VFVSamQwNXFRVEpPUkVFd1QxUkJZVUpuYjNKQ1owVkZRVmxQTDAxQlJWQkNRWGROUTJwRmVVMXFTVFJPZWswMVQwUm5kMHRCV1VzS1MzZFpRa0pCUjBSMmVrRkNSVUZSWVVSQ2FHOWtTRkozWTNwdmRrd3laSEJrUjJneFdXazFhbUl5TUhaYVIzUjNZVEpqZDBkUldVdExkMWxDUWtGSFJBcDJla0ZDUlZGUlRFUkJhM2xPZW1jMVRWUk5NVTFFUVhkbGQxbExTM2RaUWtKQlIwUjJla0ZDUldkU2RFUkhkRzlrU0ZKM1kzcHZka3d5WkhCa1IyZ3hDbGxwTldwaU1qQjJXa2QwZDJFeVkzWlJNamwwWWxjNWRXTXdTbWhqTWxabVZFVjRWMVJUT0hWYU1td3dZVWhXYVV3elpIWmpiWFJ0WWtjNU0yTjVPV3NLWVZoT01HTnRiR2xrV0ZKc1RGUkJkVTFUTlRWaVYzaEJZMjFXYldONU9UQlpWMlI2VEhwQmRVMVROSGxOUkVreVRVUmpkMDVxUVRKT1JFRXdUMVJCTkFwQ1oyOXlRbWRGUlVGWlR5OU5RVVZVUWtOdlRVdEVhR2hhYW1ScldsUkZNazB5UlhsWmVteHBUbXBCZVZsNlFUTlpWRUY1VDFSR2JVNVVaR3BhYWtKcENrOVVUbXhQUjBsNlRsZE5kMFpCV1V0TGQxbENRa0ZIUkhaNlFVSkdRVkZIUkVGU2QyUllUbTlOUmpCSFEybHpSMEZSVVVKbk56aDNRVkpWUlZSM2VFNEtZVWhTTUdOSVRUWk1lVGx1WVZoU2IyUlhTWFZaTWpsMFRESlNjbU5IZEc1TU1FNTJZbGN4ZG1KdVRrTlpXRTVzV0RCNFRWWnJNSFpaVjA0d1lWYzVkUXBqZVRsNVpGYzFla3g2U1RST2VtTjVUMVJGZDAxNlRUSk1Na1l3WkVkV2RHTklVbnBNZWtWM1JtZFpTMHQzV1VKQ1FVZEVkbnBCUWtablVVbEVRVnAzQ21SWFNuTmhWMDEzVkVGWlMwdDNXVUpDUVVkRWRucEJRa2RCVVN0RVJIaDVXbGhDZGs5dFVuSmpSM1J1VERCT2RtSlhNWFppYms1RFdWaE9iRmd3ZUUwS1Ztc3dObU50Vm0xUGJrcHNXbTVOZG1SSFJtNWplVGgzVEdwRmRVMXFRWGxPYWtFelRVUlpkMDVxVVhkT1JHdDNaMWx2UjBOcGMwZEJVVkZDTVc1clF3cENRVWxGWmtGU05rRklaMEZrWjBSa1VGUkNjWGh6WTFKTmJVMWFTR2g1V2xwNlkwTnZhM0JsZFU0ME9ISm1LMGhwYmt0QlRIbHVkV3BuUVVGQldqZ3lDazFLVTB0QlFVRkZRWGRDU0UxRlZVTkpVVVJJU2t0cFVXUkxPRm80TkhNeFRuZGpibXBNY2t0alZEWlRSRkF6WWl0R1ZURXZUbTlIZDBKelYwcDNTV2NLUTNSR0wwRkJURkJ1WW5GTWNtTndkMnR2YmxsSGFrZERPRWxPUkdacVExbHJjekpSU1VSeVZVNVFjM2REWjFsSlMyOWFTWHBxTUVWQmQwMUVZVUZCZHdwYVVVbDNXRlZHVTJ4SVJFMUtPQzl2UVVNeU1HNVJORk5IYjNwR1EzSk5VbmhyYlZCS0wwY3pZVEU1UTJGVk1FVldlRk5MYzNKclZ5OVNZMWN4U1VkYUNqZEROV05CYWtWQk9EQlhPV2RrWW1Wa1pHTkRlSE54TTBkdmRrYzRla2xFTWtGbVEyUlpXSGRpVFVabE1rcHFhVVl2ZGsxNFNtSjZOME01ZFVwSk5ERUthMEZOVDFwaE9URUtMUzB0TFMxRlRrUWdRMFZTVkVsR1NVTkJWRVV0TFMwdExRbz0ifV19fQ=="}],"timestampVerificationData":{}},"dsseEnvelope":{"payload":"eyJfdHlwZSI6Imh0dHBzOi8vaW4tdG90by5pby9TdGF0ZW1lbnQvdjEiLCJzdWJqZWN0IjpbeyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS1saW51eC5kaXN0bWV0YS5jdHMuMS50cmFjZXN0b3JlIiwiZGlnZXN0Ijp7InNoYTI1NiI6ImI0N2E0OWZkNGVlMTIzNjczNGFlYjVmYzFhYzAwZDU0MWE1MjUyNWYzYjgzN2ZiODBlYzhiYWNiMjlhYTA5NjQifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS1saW51eC5kaXN0bWV0YS52YWx1ZXN0b3JlLmluZGV4IiwiZGlnZXN0Ijp7InNoYTI1NiI6IjA3OWMwYWJmNjA0ZjcxOTg1ZDhhOGQ4Y2U0OTRiZTVjMDNkNDhmY2JhZGRhNGQ5NWI5YTA3NzA5Y2ExZTgzYTEifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS1saW51eC5kaXN0bWV0YS52YWx1ZXN0b3JlLnppcCIsImRpZ2VzdCI6eyJzaGEyNTYiOiI1NzViOTcyMzQwZGNhNzE4Yjk4NmU3MTk2NTQxNmFmNTU4OGRjZjFkODdhZTEzMTA5MDM0YmU1OTQ0NWM0YjIyIn19LHsibmFtZSI6IkNvbW1vbnNCYXNlX0xMVk0tbGludXgucGFja2FnZS5jdHMuMS50cmFjZXN0b3JlIiwiZGlnZXN0Ijp7InNoYTI1NiI6ImQzYjRjMGQ3OGZkYmUyZDUyMjVkMWQ2ZDFmNjUzNzIyNTcyODFiNjllOThhZTc3NWRmYjMyYTVlNmZkYTBlYWYifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS1saW51eC5wYWNrYWdlLnZhbHVlc3RvcmUuaW5kZXgiLCJkaWdlc3QiOnsic2hhMjU2IjoiZmYxZTRjODcyOTZiMGFlY2RhM2Y0YmMwYWQzZDc2YzdhNmE5NzhkZWEyZWI3OGQ0YzcxOWVhYjZmMzQ5ZjIzMSJ9fSx7Im5hbWUiOiJDb21tb25zQmFzZV9MTFZNLWxpbnV4LnBhY2thZ2UudmFsdWVzdG9yZS56aXAiLCJkaWdlc3QiOnsic2hhMjU2IjoiY2I0ZDBhODU1NTU1ZDRmNzBjNDdkZWE2YThhNGJiNWQwYWFjOGIxNGFlZTlkMjQ5ZDQwMDdlZDAxYmEzYmIzMCJ9fSx7Im5hbWUiOiJDb21tb25zQmFzZV9MTFZNLWxpbnV4LnZhbHVlcy5qc29uIiwiZGlnZXN0Ijp7InNoYTI1NiI6ImNmYmVmNzg2ODNjYjQ5NjdiOTllYjhmYmRiN2VlODA4NWQyZjQ5M2ZhNmRjYjZiZDFkZjJhMjkxNWE2MzIzYzgifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS1tYWNvcy5kaXN0bWV0YS5jdHMuMS50cmFjZXN0b3JlIiwiZGlnZXN0Ijp7InNoYTI1NiI6ImI0N2E0OWZkNGVlMTIzNjczNGFlYjVmYzFhYzAwZDU0MWE1MjUyNWYzYjgzN2ZiODBlYzhiYWNiMjlhYTA5NjQifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS1tYWNvcy5kaXN0bWV0YS52YWx1ZXN0b3JlLmluZGV4IiwiZGlnZXN0Ijp7InNoYTI1NiI6IjA3OWMwYWJmNjA0ZjcxOTg1ZDhhOGQ4Y2U0OTRiZTVjMDNkNDhmY2JhZGRhNGQ5NWI5YTA3NzA5Y2ExZTgzYTEifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS1tYWNvcy5kaXN0bWV0YS52YWx1ZXN0b3JlLnppcCIsImRpZ2VzdCI6eyJzaGEyNTYiOiI1NzViOTcyMzQwZGNhNzE4Yjk4NmU3MTk2NTQxNmFmNTU4OGRjZjFkODdhZTEzMTA5MDM0YmU1OTQ0NWM0YjIyIn19LHsibmFtZSI6IkNvbW1vbnNCYXNlX0xMVk0tbWFjb3MucGFja2FnZS5jdHMuMS50cmFjZXN0b3JlIiwiZGlnZXN0Ijp7InNoYTI1NiI6IjRjMjJmMjU4NDJiZTRjMTY1MTlhNTA0YzUxZDk5YmY2ZDJkMzZlMTUwY2MxM2M0MjczYmY0YjAwN2VjNWQ2M2UifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS1tYWNvcy5wYWNrYWdlLnZhbHVlc3RvcmUuaW5kZXgiLCJkaWdlc3QiOnsic2hhMjU2IjoiZGM0Mzk5OTAwNmE3MTNjOWI3ZjViMjIzYmFmODA1MzMyNDE4MWMzODI4ZWRhN2ZiY2Y5MGZiOWM0NWFiODM0NCJ9fSx7Im5hbWUiOiJDb21tb25zQmFzZV9MTFZNLW1hY29zLnBhY2thZ2UudmFsdWVzdG9yZS56aXAiLCJkaWdlc3QiOnsic2hhMjU2IjoiMDIwYjQ1MzNmZjg0ODkxODkxYWM4ZThlZTMxYmRhODMwZDg5Nzc2OGVlNGZkOTY2NzE2ZWZiNzQxNmIzNmY0OCJ9fSx7Im5hbWUiOiJDb21tb25zQmFzZV9MTFZNLW1hY29zLnZhbHVlcy5qc29uIiwiZGlnZXN0Ijp7InNoYTI1NiI6IjEyYTg1Y2NkODY5ZDYzZTM5ZWYyMDU5ZmYxN2VkMTA4ZDc1NmYzM2Q1NGZkNWQzM2E4ODkyZjU0OWNmZWZiOGYifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS13aW4zMi5kaXN0bWV0YS5jdHMuMS50cmFjZXN0b3JlIiwiZGlnZXN0Ijp7InNoYTI1NiI6ImI0N2E0OWZkNGVlMTIzNjczNGFlYjVmYzFhYzAwZDU0MWE1MjUyNWYzYjgzN2ZiODBlYzhiYWNiMjlhYTA5NjQifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS13aW4zMi5kaXN0bWV0YS52YWx1ZXN0b3JlLmluZGV4IiwiZGlnZXN0Ijp7InNoYTI1NiI6IjA3OWMwYWJmNjA0ZjcxOTg1ZDhhOGQ4Y2U0OTRiZTVjMDNkNDhmY2JhZGRhNGQ5NWI5YTA3NzA5Y2ExZTgzYTEifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS13aW4zMi5kaXN0bWV0YS52YWx1ZXN0b3JlLnppcCIsImRpZ2VzdCI6eyJzaGEyNTYiOiI1NzViOTcyMzQwZGNhNzE4Yjk4NmU3MTk2NTQxNmFmNTU4OGRjZjFkODdhZTEzMTA5MDM0YmU1OTQ0NWM0YjIyIn19LHsibmFtZSI6IkNvbW1vbnNCYXNlX0xMVk0td2luMzIucGFja2FnZS5jdHMuMS50cmFjZXN0b3JlIiwiZGlnZXN0Ijp7InNoYTI1NiI6IjUyZTcyYWVkNjUzYjk2NWI2MzIxMTRiYmUwODlhYzEwZmMxOWNiNzhiZDMwNzhmN2NkYWFlOWMwM2M1NzY0YjQifX0seyJuYW1lIjoiQ29tbW9uc0Jhc2VfTExWTS13aW4zMi5wYWNrYWdlLnZhbHVlc3RvcmUuaW5kZXgiLCJkaWdlc3QiOnsic2hhMjU2IjoiZTM0YjI5M2UxYmQxZTQzN2NiMTI0NDUwYmRmMjdiZGZmNjllYzc2MmY5YWM0OTdmNTY0MGMzNTg5NjUwZjI2YiJ9fSx7Im5hbWUiOiJDb21tb25zQmFzZV9MTFZNLXdpbjMyLnBhY2thZ2UudmFsdWVzdG9yZS56aXAiLCJkaWdlc3QiOnsic2hhMjU2IjoiMTY5YzlmNmIyOWU2NGYzOTViZWYyM2Y1MGEyZDEzODNkN2U1Y2FlMzhiNGUwZTM4YzgyOWJiNmI3MmJkYzNjOSJ9fSx7Im5hbWUiOiJDb21tb25zQmFzZV9MTFZNLXdpbjMyLnZhbHVlcy5qc29uIiwiZGlnZXN0Ijp7InNoYTI1NiI6ImM5MjVkZmVkODMyN2RkNjg3NTFmZThhMjg3ODg3ZDE3OWY0MzFkZGM5ZjA0YzNhMzRlOWZlNDQ5OTI0NmU0ZWYifX0seyJuYW1lIjoidmFsdWVzLmpzb24iLCJkaWdlc3QiOnsic2hhMjU2IjoiY2E1Yzk2N2UzMDQyN2Q2YmFhMDUyNDcwZTU5ZWI4YmFjODRiYmZjZDdlNGVmMjg2Mjc5YjRhMWY2MjRkYjgyZiJ9fV0sInByZWRpY2F0ZVR5cGUiOiJodHRwczovL3Nsc2EuZGV2L3Byb3ZlbmFuY2UvdjEiLCJwcmVkaWNhdGUiOnsiYnVpbGREZWZpbml0aW9uIjp7ImJ1aWxkVHlwZSI6Imh0dHBzOi8vYWN0aW9ucy5naXRodWIuaW8vYnVpbGR0eXBlcy93b3JrZmxvdy92MSIsImV4dGVybmFsUGFyYW1ldGVycyI6eyJ3b3JrZmxvdyI6eyJyZWYiOiJyZWZzL3RhZ3MvMC4xLjIwMjYwNzA2MDY0MDQ5IiwicmVwb3NpdG9yeSI6Imh0dHBzOi8vZ2l0aHViLmNvbS9ka3BrZy9Db21tb25zQmFzZV9MTFZNIiwicGF0aCI6Ii5naXRodWIvd29ya2Zsb3dzL2Rpc3RyaWJ1dGUtMC4xLnltbCJ9fSwiaW50ZXJuYWxQYXJhbWV0ZXJzIjp7ImdpdGh1YiI6eyJldmVudF9uYW1lIjoicHVzaCIsInJlcG9zaXRvcnlfaWQiOiIxMjIyODczOTg4IiwicmVwb3NpdG9yeV9vd25lcl9pZCI6IjI3ODkxMzUwMCIsInJ1bm5lcl9lbnZpcm9ubWVudCI6ImdpdGh1Yi1ob3N0ZWQifX0sInJlc29sdmVkRGVwZW5kZW5jaWVzIjpbeyJ1cmkiOiJnaXQraHR0cHM6Ly9naXRodWIuY29tL2RrcGtnL0NvbW1vbnNCYXNlX0xMVk1AcmVmcy90YWdzLzAuMS4yMDI2MDcwNjA2NDA0OSIsImRpZ2VzdCI6eyJnaXRDb21taXQiOiI4YWY3ZGUxNjNhMmM5YjYwMmMwN2EwMjkxZjU3Y2YwYjkzZThiMzVjIn19XX0sInJ1bkRldGFpbHMiOnsiYnVpbGRlciI6eyJpZCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9ka3BrZy9Db21tb25zQmFzZV9MTFZNLy5naXRodWIvd29ya2Zsb3dzL2Rpc3RyaWJ1dGUtMC4xLnltbEByZWZzL3RhZ3MvMC4xLjIwMjYwNzA2MDY0MDQ5In0sIm1ldGFkYXRhIjp7Imludm9jYXRpb25JZCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9ka3BrZy9Db21tb25zQmFzZV9MTFZNL2FjdGlvbnMvcnVucy8yODc3MjkxMDMzNi9hdHRlbXB0cy8xIn19fX0=","payloadType":"application/vnd.in-toto+json","signatures":[{"sig":"MEUCIQDyEGxyIZ1qwujwIDwR4UEcBAHhY5jDR715CR8ejWAjqgIgevJVs3+WKDmT7MW2tgp5x6hXep1lHXvbzOmGdrwoThQ="}]}}
+            ] },
+          "github_slsa_v1_l3": {},
+          "openbsd_signify": {}
+        },
+        "build_to_sign": {
+          "bundle_canonical": "919845be28f7c701d88aafceee7c3661fa165f3fc36533e6bc5f779ffc3651c2",
+          "bundle_modver": "CommonsBase_LLVM.Distribution@0.1.20260706064049",
+          "modules": [
+            "CommonsBase_LLVM.Distribution@0.1.20260706064049",
+            "CommonsBase_LLVM.Toolchain.MinGW@21.1.8+rev-20251216",
+            "CommonsBase_LLVM.Toolchain.MinGW.Bundle@21.1.8+rev-20251216",
+            "CommonsBase_LLVM.Toolchain.MinGW.Zip.MacArm64@21.1.8+rev-20251216",
+            "CommonsBase_LLVM.Toolchain.MinGW.Zip.MacX64@21.1.8+rev-20251216",
+            "CommonsBase_LLVM.Toolchain.MinGW.Zip.UbuntuArm64@21.1.8+rev-20251216",
+            "CommonsBase_LLVM.Toolchain.MinGW.Zip.UbuntuX64@21.1.8+rev-20251216"
+          ],
+          "producer_accepts": [],
+          "distmeta": {
+            "traces": [
+              {
+                "tag": "cts.1",
+                "path": "CommonsBase_LLVM-linux.distmeta.cts.1.tracestore"
+              },
+              {
+                "tag": "cts.1",
+                "path": "CommonsBase_LLVM-macos.distmeta.cts.1.tracestore"
+              },
+              {
+                "tag": "cts.1",
+                "path": "CommonsBase_LLVM-win32.distmeta.cts.1.tracestore"
+              }
+            ],
+            "values": [
+              { "path": "CommonsBase_LLVM-linux.distmeta.valuestore.zip" },
+              { "path": "CommonsBase_LLVM-macos.distmeta.valuestore.zip" },
+              { "path": "CommonsBase_LLVM-win32.distmeta.valuestore.zip" }
+            ]
+          },
+          "package": {
+            "traces": [
+              {
+                "tag": "cts.1",
+                "path": "CommonsBase_LLVM-linux.package.cts.1.tracestore"
+              },
+              {
+                "tag": "cts.1",
+                "path": "CommonsBase_LLVM-macos.package.cts.1.tracestore"
+              },
+              {
+                "tag": "cts.1",
+                "path": "CommonsBase_LLVM-win32.package.cts.1.tracestore"
+              }
+            ],
+            "values": [
+              { "path": "CommonsBase_LLVM-linux.package.valuestore.zip" },
+              { "path": "CommonsBase_LLVM-macos.package.valuestore.zip" },
+              { "path": "CommonsBase_LLVM-win32.package.valuestore.zip" }
+            ]
+          }
+        }
+      },
+      "continuations": {
+        "attestation": {
+          "openbsd_signify": {
+            "signature": "untrusted comment: signed by key 114e408d24621843\nRWQRTkCNJGIYQ/VJlHlqAaroe63uKH2CPMruyZWs883ECJ0ubI8fKDAH8Dw1UZoOx/KKZnPTm7I74WV/y+k2kQ6/LCmRovCkrQM=\n"
+          }
+        },
+        "continuations_to_sign": {
+          "0.2": {
+            "application": { "name": "dk0", "version": "2.4.2+rev-245" },
+            "openbsd_signify": {
+              "public_key": "untrusted comment: CommonsBase_LLVM-0.2\nRWTncb6x09WsqMtck3+sYyu5GL9+KOMQ59WX8YaLB3LCjZ6UIqs2b4EU\n"
+            }
+          },
+          "1.0": {
+            "application": { "name": "dk0", "version": "2.4.2+rev-245" },
+            "openbsd_signify": {
+              "public_key": "untrusted comment: CommonsBase_LLVM-1.0\nRWTufkKJAlN3mIWD1vL4/YL4xJ+XfEGMyaEP5sB8skwvov1e1AKjmqXv\n"
+            }
+          }
+        }
+      },
+      "id": "CommonsBase_LLVM@0.1.20260706064049",
+      "license": { "spdx": "Apache-2.0" },
+      "producer": {
+        "application": { "name": "dk0", "version": "2.4.2+rev-249" },
+        "github_slsa_v1_l2": { "repository": "dkpkg/CommonsBase_LLVM" },
+        "openbsd_signify": {
+          "public_key": "untrusted comment: CommonsBase_LLVM-0.1\nRWQRTkCNJGIYQyOA9nqG47Qz96wIPqkzTh7eGgFf164600kUWcTgpTpC\n"
+        }
+      },
+      "min_dk_version": "2.4.2.212"
+    }
+  ],
+  "forms": [],
+  "schema_version": { "major": 1, "minor": 0 }
+}

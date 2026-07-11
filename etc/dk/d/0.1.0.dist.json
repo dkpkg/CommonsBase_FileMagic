@@ -1,0 +1,32 @@
+{
+  "continuations": {
+    "attestation": {
+      "openbsd_signify": {
+        "signature": "untrusted comment: signed by key 1fa672bdf123a65c\nRWQfpnK98SOmXMDb0+Dp9RXUoLmfRysw5kMmhjS8YvniZM79XlCRZ0Jlb5XuPvOkc3/WKBcVK6CcdduZoW/ED7+MMmdvdZxxugg=\n"
+      }
+    },
+    "continuations_to_sign": {
+      "0.2": {
+        "application": { "name": "dk0", "version": "2.4.2+rev-253" },
+        "openbsd_signify": {
+          "public_key": "untrusted comment: CommonsBase_FileMagic-0.2\nRWRB0Vp89rkbNX632FEr9+vpPaHR3fTuTapX5tQJ4TsdRDUKlcYdg+mI\n"
+        }
+      },
+      "1.0": {
+        "application": { "name": "dk0", "version": "2.4.2+rev-253" },
+        "openbsd_signify": {
+          "public_key": "untrusted comment: CommonsBase_FileMagic-1.0\nRWQ3sh6eKNgqFjmSX0HGaBBKHuV1TFsYbvF33uyCInae7efYyGxzf0DK\n"
+        }
+      }
+    }
+  },
+  "id": "CommonsBase_FileMagic@0.1.0",
+  "license": { "spdx": "ISC" },
+  "producer": {
+    "application": { "name": "dk0", "version": "2.4.2+rev-253" },
+    "github_slsa_v1_l2": { "repository": "dkpkg/CommonsBase_FileMagic" },
+    "openbsd_signify": {
+      "public_key": "untrusted comment: CommonsBase_FileMagic-0.1\nRWQfpnK98SOmXMjE8HjH44kw6lqC0aZ6D0nJp27C82PH/l+YxgrQGIaA\n"
+    }
+  }
+}

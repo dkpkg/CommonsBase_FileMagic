@@ -78,6 +78,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
+      - name: Prepare static libc for the manylinux container
+        if: ${{ matrix.image }}
+        run: dnf install -y glibc-static glibc-static.i686 glibc-devel.i686 libgcc.i686
+
       - name: Distribute Modules
         uses: diskuv/dk-distribute@v3
         with:
