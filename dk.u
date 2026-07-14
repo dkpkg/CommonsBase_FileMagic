@@ -1,5 +1,6 @@
 # CommonsBase_FileMagic
 ## workspace
+  %% actual_version("2.4.2.273")
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_LLVM" }
   'import'
@@ -33,22 +34,16 @@
   'import'
   'github-l2'
   { {
-      'CommonsBase_Remote', '0.1.20260711004226', {
-        'blake2b-256:fefb1339cc0c17f9af74c447f19e919d62bf488e3e0f8249945e8a991418f4a6',
-        'sha256:64096f4246e3a0fd9b628d7e7f15bdc214cdbcb6e4ee4dc1db21cdc6be241255',
-        'sha1:9c2138db329d45714e2ef43ff5e0274b6fa9a5b0'
+      'CommonsBase_Remote', '0.2.20260711055416', {
+        'blake2b-256:488c8ce020f317d8678b700b01f1f0813b7a8bbe29148b2443721da4081094bc',
+        'sha256:89e0308ce3fe63600806f9bffcaec57f0101d975b8b82500c21a7a3d70423aa4',
+        'sha1:22eda536f49d19b2277ea2abdf289a3c2b11d956'
       } },
     {
       'CommonsBase_Build', '0.1.20260707131124', {
         'blake2b-256:ee5519a121205f83ca067aa6e6098c82118bd37238e1bb54c840edb3c1a10304',
         'sha256:84c901c73178a0c784c7d893bf4e6895fbe09ffe86b8436557530cc4ba0000aa',
         'sha1:85848478330e6c8ecf377f3dc2af449311ce3518'
-      } },
-    {
-      'CommonsBase_Remote', '0.1.20260711003204', {
-        'blake2b-256:0d28e832c2b4f9b4cf51f01efda13a4db6edb78c15bbf96dbe151d1de14fd94c',
-        'sha256:726c83e218ef22204dc7c1a8633539c650911a9d34b3113955061899e78a37d2',
-        'sha1:95ec85359195709ef23964952af21a1e66fc8f0e'
       } },
     {
       'CommonsBase_Std', '2.6.20260707120738', {
@@ -60,6 +55,30 @@
       'CommonsBase_Std', '2.6.20260708055043', {
         'blake2b-256:41961cab7bdb7b6c703c091ad9ccb75bf48819c1a8ab7aaf9ce5d947072a586b',
         'sha256:686d8f60f50d6debb12c2faa46f33ae7438be0b30787a01d88de52bebc832f78',
+        'sha1:94296e5e1ad55f335a222fcd27aea40d96355322'
+      } } }
+
+  %% import { type="github-l2", repo="dkpkg/CommonsBase_Remote" }
+  'import'
+  'github-l2'
+  { {
+      'CommonsBase_Remote', '0.2.20260711055416', {
+        'blake2b-256:488c8ce020f317d8678b700b01f1f0813b7a8bbe29148b2443721da4081094bc', 'sha256:89e0308ce3fe63600806f9bffcaec57f0101d975b8b82500c21a7a3d70423aa4',
+        'sha1:22eda536f49d19b2277ea2abdf289a3c2b11d956'
+      } },
+    {
+      'CommonsBase_Build', '0.1.20260707131124', {
+        'blake2b-256:ee5519a121205f83ca067aa6e6098c82118bd37238e1bb54c840edb3c1a10304', 'sha256:84c901c73178a0c784c7d893bf4e6895fbe09ffe86b8436557530cc4ba0000aa',
+        'sha1:85848478330e6c8ecf377f3dc2af449311ce3518'
+      } },
+    {
+      'CommonsBase_Std', '2.6.20260707120738', {
+        'blake2b-256:fbf6d2ea9bb17069c9f7cd463ee027c291f6fb6692821286501d1523db0febe2', 'sha256:d312d776756f822769de278bbf8ccbb167ea2d84d7b1dbf61b47f3c4cdf86a71',
+        'sha1:bfbb3d5be41f7a88023a4367dc84b1ce5dcad14e'
+      } },
+    {
+      'CommonsBase_Std', '2.6.20260708055043', {
+        'blake2b-256:41961cab7bdb7b6c703c091ad9ccb75bf48819c1a8ab7aaf9ce5d947072a586b', 'sha256:686d8f60f50d6debb12c2faa46f33ae7438be0b30787a01d88de52bebc832f78',
         'sha1:94296e5e1ad55f335a222fcd27aea40d96355322'
       } } }
 
