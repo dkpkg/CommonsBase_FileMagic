@@ -1,11 +1,19 @@
 # CommonsBase_FileMagic
 ## workspace
   %% actual_version("2.4.2.273")
+  'actual_version'
+  '2.4.2.273'
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_LLVM" }
   'import'
   'github-l2'
   { {
+      'CommonsBase_LLVM', '0.1.20260715044440', {
+        'blake2b-256:5e748f7f1beb707bf019c8ba741f62a527cdbd4941dfad79c619fe30b65dd258',
+        'sha256:89072616d92b4563617bb2228ef8353e788286f8794f251261801f3ab177c114',
+        'sha1:e8b1d8e157cb6007df9237a3f365582c74b8753f'
+      } },
+    {
       'CommonsBase_LLVM', '0.1.20260706064049', {
         'blake2b-256:96b2b482db4652a60893713c652b3bb5be89a143f5e3e7ca6178c99071e0cb11',
         'sha256:8f32bfb59d849ce62898f23e712c58538c294c37d4cd3cf501f2f66b5cbf5820',
@@ -28,58 +36,12 @@
         'blake2b-256:9d442eb18b3cce1667fbe8c3585825aafb3384aa6df825740cb6d30df41fde59',
         'sha256:b8c8a247672604c9487de530cda33ac4e13bf586b6ec1cc47c4562fe879a4897',
         'sha1:daa9de5e3ed097e8259f973455a722056d84cba6'
-      } } }
-
-  %% import { type="github-l2", repo="dkpkg/CommonsBase_Remote" }
-  'import'
-  'github-l2'
-  { {
-      'CommonsBase_Remote', '0.2.20260711055416', {
-        'blake2b-256:488c8ce020f317d8678b700b01f1f0813b7a8bbe29148b2443721da4081094bc',
-        'sha256:89e0308ce3fe63600806f9bffcaec57f0101d975b8b82500c21a7a3d70423aa4',
-        'sha1:22eda536f49d19b2277ea2abdf289a3c2b11d956'
       } },
     {
-      'CommonsBase_Build', '0.1.20260707131124', {
-        'blake2b-256:ee5519a121205f83ca067aa6e6098c82118bd37238e1bb54c840edb3c1a10304',
-        'sha256:84c901c73178a0c784c7d893bf4e6895fbe09ffe86b8436557530cc4ba0000aa',
-        'sha1:85848478330e6c8ecf377f3dc2af449311ce3518'
-      } },
-    {
-      'CommonsBase_Std', '2.6.20260707120738', {
-        'blake2b-256:fbf6d2ea9bb17069c9f7cd463ee027c291f6fb6692821286501d1523db0febe2',
-        'sha256:d312d776756f822769de278bbf8ccbb167ea2d84d7b1dbf61b47f3c4cdf86a71',
-        'sha1:bfbb3d5be41f7a88023a4367dc84b1ce5dcad14e'
-      } },
-    {
-      'CommonsBase_Std', '2.6.20260708055043', {
-        'blake2b-256:41961cab7bdb7b6c703c091ad9ccb75bf48819c1a8ab7aaf9ce5d947072a586b',
-        'sha256:686d8f60f50d6debb12c2faa46f33ae7438be0b30787a01d88de52bebc832f78',
-        'sha1:94296e5e1ad55f335a222fcd27aea40d96355322'
-      } } }
-
-  %% import { type="github-l2", repo="dkpkg/CommonsBase_Remote" }
-  'import'
-  'github-l2'
-  { {
-      'CommonsBase_Remote', '0.2.20260711055416', {
-        'blake2b-256:488c8ce020f317d8678b700b01f1f0813b7a8bbe29148b2443721da4081094bc', 'sha256:89e0308ce3fe63600806f9bffcaec57f0101d975b8b82500c21a7a3d70423aa4',
-        'sha1:22eda536f49d19b2277ea2abdf289a3c2b11d956'
-      } },
-    {
-      'CommonsBase_Build', '0.1.20260707131124', {
-        'blake2b-256:ee5519a121205f83ca067aa6e6098c82118bd37238e1bb54c840edb3c1a10304', 'sha256:84c901c73178a0c784c7d893bf4e6895fbe09ffe86b8436557530cc4ba0000aa',
-        'sha1:85848478330e6c8ecf377f3dc2af449311ce3518'
-      } },
-    {
-      'CommonsBase_Std', '2.6.20260707120738', {
-        'blake2b-256:fbf6d2ea9bb17069c9f7cd463ee027c291f6fb6692821286501d1523db0febe2', 'sha256:d312d776756f822769de278bbf8ccbb167ea2d84d7b1dbf61b47f3c4cdf86a71',
-        'sha1:bfbb3d5be41f7a88023a4367dc84b1ce5dcad14e'
-      } },
-    {
-      'CommonsBase_Std', '2.6.20260708055043', {
-        'blake2b-256:41961cab7bdb7b6c703c091ad9ccb75bf48819c1a8ab7aaf9ce5d947072a586b', 'sha256:686d8f60f50d6debb12c2faa46f33ae7438be0b30787a01d88de52bebc832f78',
-        'sha1:94296e5e1ad55f335a222fcd27aea40d96355322'
+      'CommonsBase_Std', '2.6.20260715034712', {
+        'blake2b-256:ce17873f88018da536a8ba479b9f6a5c1de18f6395a158436bb50589972a6eb7',
+        'sha256:fd84db09d22aebea9e579a9e42c63986e26a1ad28e2890e874e2b6784777a5f8',
+        'sha1:6ccd7db2cb64841af17f9c47fce5e346e9e65c10'
       } } }
 
 ## Assets
