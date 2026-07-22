@@ -8,8 +8,8 @@ The OpenBSD `file`(1) content-type identifier, built for every dk ABI as a singl
 sources and overlays selected upstream `file/file` FILE5_47 magic entries,
 adding Diskuv-authored compatibility shims so the tool builds and runs
 identically across the macOS, Linux, and Windows ABIs. Every ABI produces
-one `bin/file` with the magic database compiled in, so there is no separate
-`magic` database to ship or locate at runtime.
+one self-contained `bin/file` with the magic database compiled directly into
+the executable.
 
 ## License
 
