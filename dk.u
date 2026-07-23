@@ -55,16 +55,26 @@ SUCH DAMAGE.
   'import'
   'github-l2'
   { {
-      'CommonsBase_LLVM', '0.1.20260719021059', {
-        'blake2b-256:ab9dd1f316d99aab1f17e02cc2ec2cb9b1f345eb3faf5f19829d1a6a93390ee3',
-        'sha256:862111ad69907bffb543015d237fe52670e026700e1502e855f23488afb0dc44',
-        'sha1:d2c2058826f9afe71749408731172e95369aae9b'
+      'CommonsBase_LLVM', '0.1.20260723061853', {
+        'blake2b-256:2add42b9202f0ecbaa1253326b2bbc6d182a3434f375d1548b1a58164b7ddac9',
+        'sha256:bc04736f7a5897fa598b8a8d8988835814b2ad009e75a01f04ebbcc34c3b820b',
+        'sha1:4bdb5076dbbf032a569f262d16327473cbfdc3a1'
       } },
     {
-      'CommonsBase_Std', '2.6.20260718222208', {
-        'blake2b-256:d28c9e22c422e6c8ab4083eb1be597292dec46276de308106f0798633b82fc20',
-        'sha256:ec03493d6f73aa962b9df0be8ccf19be607c7cd28bb89aa2d1de3a882ad33024',
-        'sha1:c6eef19dd6c1fdd133c4e4ced6c545e08af628f4'
+      'CommonsBase_Std', '2.6.20260723055125', {
+        'blake2b-256:e98f3024a71bc5b6b22ca624a2c0b0a8dff5c8346d2e1396c137f2a380505285',
+        'sha256:972d2bf05f2a369731458c78f692eb0763d872a10718ebfc3cc28de53be6bf60',
+        'sha1:7b7908b4a94dadf04d4b85b5223ea660370fd9ec'
+      } } }
+
+  %% import { type="github-l2", repo="dkpkg/CommonsBase_Std" }
+  'import'
+  'github-l2'
+  { {
+      'CommonsBase_Std', '2.6.20260723055125', {
+        'blake2b-256:e98f3024a71bc5b6b22ca624a2c0b0a8dff5c8346d2e1396c137f2a380505285',
+        'sha256:972d2bf05f2a369731458c78f692eb0763d872a10718ebfc3cc28de53be6bf60',
+        'sha1:7b7908b4a94dadf04d4b85b5223ea660370fd9ec'
       } } }
 
 ## Assets
