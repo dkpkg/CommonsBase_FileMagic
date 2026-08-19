@@ -15,12 +15,12 @@ The object is bin/file.exe compiled for the ABI.
   $ get-object CommonsBase_FileMagic.File@7.8.50407 -s Release.target_abi -d ${RUNTIME}/File-7.8.50407
   \test(pass)
   \dk.object(abi: "Release.Darwin_arm64", value-id: "orw5ufcbtpfhoolmn3edctuks5slcu6mpsekz4ju5iv2zviwpspjq")
-  \dk.object(abi: "Release.Darwin_x86_64", value-id: "ojnr3jm3fxbo5xj3nkita2kbymekuj2zjmmsdncpupwvvk6wdizsa")
+  \dk.object(abi: "Release.Darwin_x86_64", value-id: "owdblbe5mouyed6peawxg42fgfxl7hcxucrk4gxqkbqwv6iamoe4a")
   \dk.object(abi: "Release.Linux_arm64", value-id: "o5avhm2mcs3q527pe3vv5yownl2orfxu7ak3bpy7kvjve5iwpr6gq")
-  \dk.object(abi: "Release.Linux_x86", value-id: "oszw7iqompkbdpr46nmd2mtefnnej4bdwqezpzpalqvgr232jyizq")
+  \dk.object(abi: "Release.Linux_x86", value-id: "o6y56dhlb2thn4m3edr5yl7mzrobrg6j63guip2cigwqigjcq73ra")
   \dk.object(abi: "Release.Linux_x86_64", value-id: "oye5vhgtd74nhaml2opt5nxz67oypdq3g34rjtpe4tmhnhncqbjwa")
-  \dk.object(abi: "Release.Windows_arm64", value-id: "ov4aynftw2g2st7xt3qvoxtmjgc7gndpytgdixr4srctzx75izkmq")
-  \dk.object(abi: "Release.Windows_x86", value-id: "ogfs7l4ljjrzdomjs6dgmgfal4mrzeo4tbeyrdjaitb6bxd2v5vza")
+  \dk.object(abi: "Release.Windows_arm64", value-id: "osvw727pqq3aiz5fviu3onbs7iydauitmv2bfiz3omg3he46afswa")
+  \dk.object(abi: "Release.Windows_x86", value-id: "opuwdwc76nrd4xihiz7jubpvzy3nzmm6vjsnfuywz2igfgabwvyeq")
   \dk.object(abi: "Release.Windows_x86_64", value-id: "oteegaquqsej3mxqqnnanbgg7mocda64itjjdcq4tswv4jrr5oaiq")\;
 
 Running bin/file.exe on itself (the bin/file.exe) will tell us what CPU architecture and operating system
