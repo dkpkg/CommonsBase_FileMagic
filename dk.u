@@ -49,119 +49,73 @@ SUCH DAMAGE.
 ## workspace
   %% actual_version("2.4.3.9")
   'actual_version'
-  '2.4.2.279'
+  '2.4.3.9'
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_LLVM" }
-  'import'
-  'github-l2'
-  { {
-      'CommonsBase_LLVM', '0.1.20260723061853', {
-        'blake2b-256:2add42b9202f0ecbaa1253326b2bbc6d182a3434f375d1548b1a58164b7ddac9',
-        'sha256:bc04736f7a5897fa598b8a8d8988835814b2ad009e75a01f04ebbcc34c3b820b',
-        'sha1:4bdb5076dbbf032a569f262d16327473cbfdc3a1'
-      } },
-    {
-      'CommonsBase_Std', '2.6.20260723055125', {
-        'blake2b-256:e98f3024a71bc5b6b22ca624a2c0b0a8dff5c8346d2e1396c137f2a380505285',
-        'sha256:972d2bf05f2a369731458c78f692eb0763d872a10718ebfc3cc28de53be6bf60',
-        'sha1:7b7908b4a94dadf04d4b85b5223ea660370fd9ec'
-      } } }
+  \dk.import(type: "github-l2", library: "CommonsBase_LLVM",
+    version: "0.1.20260913085659",
+    checksum: (blake2b-256: "6d52a4a68f75e9656acffc6bee83701139cd110bddbaf4c35c4131facaffdc9b",
+      sha256: "c51d6e04e6779799c4df31630c75ed17d95386492c7e0ddc046f3734c816e929",
+      sha1: "2b15bb5217450d15e8257f25155fd3726363a3e2"))\;
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_Std" }
-  'import'
-  'github-l2'
-  { {
-      'CommonsBase_Std', '2.6.20260723055125', {
-        'blake2b-256:e98f3024a71bc5b6b22ca624a2c0b0a8dff5c8346d2e1396c137f2a380505285',
-        'sha256:972d2bf05f2a369731458c78f692eb0763d872a10718ebfc3cc28de53be6bf60',
-        'sha1:7b7908b4a94dadf04d4b85b5223ea660370fd9ec'
-      } } }
+  \dk.import(type: "github-l2", library: "CommonsBase_Std",
+    version: "2.6.20260913085659",
+    checksum: (blake2b-256: "8d601ad9945d5aae4afaa980e922f6d7bcb32a4effd0e3c12d03bf6c3b98839d",
+      sha256: "25224920a4b704b3693afe5343ce05c5cd2c0d9e19ce1641511707fb5af59887",
+      sha1: "f7dab451a2d2860aff9bdff09530b6de464255aa"))\;
 
 ## Assets
 
 ### CommonsBase_FileMagic.File.Apparatus@7.8.0
 
   % unified.asset { name="CompatHeader", file="assets/compat/include/filemagic_compat.h" }
-  'asset'
-  '1744'
-  'sha256:30069f7cc319c454cc3ef55799af68388208c118bb191c58edcf85476f1d0854'
+  \dk.asset(byteSize: "1744", checksum: (sha256: "30069f7cc319c454cc3ef55799af68388208c118bb191c58edcf85476f1d0854"))\;
 
   % unified.asset { name="CompatErr", file="assets/compat/include/err.h" }
-  'asset'
-  '438'
-  'sha256:6d70038cdc4e7f60f8b3f07558c827cf49955b7b9b90eec0fbb2b476afc3e514'
+  \dk.asset(byteSize: "438", checksum: (sha256: "6d70038cdc4e7f60f8b3f07558c827cf49955b7b9b90eec0fbb2b476afc3e514"))\;
 
   % unified.asset { name="CompatRegex", file="assets/compat/include/regex.h" }
-  'asset'
-  '909'
-  'sha256:99f41ed688ad239720c9a061ee3063bcb826e782dbd53f43caff73f64ac108b8'
+  \dk.asset(byteSize: "909", checksum: (sha256: "99f41ed688ad239720c9a061ee3063bcb826e782dbd53f43caff73f64ac108b8"))\;
 
   % unified.asset { name="CompatCdefs", file="assets/compat/include/sys/cdefs.h" }
-  'asset'
-  '456'
-  'sha256:914f2cf9a9cf73263a71b6645b16e1828809be0818b00b81d68a481a794ac170'
+  \dk.asset(byteSize: "456", checksum: (sha256: "914f2cf9a9cf73263a71b6645b16e1828809be0818b00b81d68a481a794ac170"))\;
 
   % unified.asset { name="CompatQueue", file="assets/compat/include/sys/queue.h" }
-  'asset'
-  '21463'
-  'sha256:2467348c92f2130ad4ffa70eb973c13326fedf08ca0658bed17f0138bc2795cc'
+  \dk.asset(byteSize: "21463", checksum: (sha256: "2467348c92f2130ad4ffa70eb973c13326fedf08ca0658bed17f0138bc2795cc"))\;
 
   % unified.asset { name="CompatTree", file="assets/compat/include/sys/tree.h" }
-  'asset'
-  '33827'
-  'sha256:cbbe65854ef9ee5ec400aa4127c4d87f0a4ed27e699cbdbe92d7db005842f793'
+  \dk.asset(byteSize: "33827", checksum: (sha256: "cbbe65854ef9ee5ec400aa4127c4d87f0a4ed27e699cbdbe92d7db005842f793"))\;
 
   % unified.asset { name="CompatNull", file="assets/compat/include/sys/_null.h" }
-  'asset'
-  '111'
-  'sha256:7899479146940b2f2c2866a0c453bb490f13a2672a070ba60079a382f7c21bf6'
+  \dk.asset(byteSize: "111", checksum: (sha256: "7899479146940b2f2c2866a0c453bb490f13a2672a070ba60079a382f7c21bf6"))\;
 
   % unified.asset { name="CompatVisHeader", file="assets/compat/include/vis.h" }
-  'asset'
-  '3504'
-  'sha256:b4dd8848fc32d064c5b364005385be3bd5ab12ae931ff89b0eca5eb21ffbfaaf'
+  \dk.asset(byteSize: "3504", checksum: (sha256: "b4dd8848fc32d064c5b364005385be3bd5ab12ae931ff89b0eca5eb21ffbfaaf"))\;
 
   % unified.asset { name="CompatSource", file="assets/compat/src/filemagic_compat.c" }
-  'asset'
-  '4440'
-  'sha256:0c5783c073bd13f7091fd3c175000014bfb272354f90d087ec46b4bb0b089ec3'
+  \dk.asset(byteSize: "4440", checksum: (sha256: "0c5783c073bd13f7091fd3c175000014bfb272354f90d087ec46b4bb0b089ec3"))\;
 
   % unified.asset { name="CompatRegexSource", file="assets/compat/src/regex_compat.cpp" }
-  'asset'
-  '3757'
-  'sha256:05b49915e18a7501d71a4e1f64ddfdd7e7f2c79760be6c64151f93175349d3a5'
+  \dk.asset(byteSize: "3757", checksum: (sha256: "05b49915e18a7501d71a4e1f64ddfdd7e7f2c79760be6c64151f93175349d3a5"))\;
 
   % unified.asset { name="CompatVisSource", file="assets/compat/src/vis.c" }
-  'asset'
-  '6292'
-  'sha256:3ebefacff0b48b6c0002ea34bc1a4471720c2d244a679f676d072178718e4a4a'
+  \dk.asset(byteSize: "6292", checksum: (sha256: "3ebefacff0b48b6c0002ea34bc1a4471720c2d244a679f676d072178718e4a4a"))\;
 
   % unified.asset { name="PortableMain", file="assets/src/filemagic_portable_main.c" }
-  'asset'
-  '9131'
-  'sha256:70c3f8028909368946929ce092b6912a3e9dcdfb9c893f40c905ce889bdb076e'
+  \dk.asset(byteSize: "9131", checksum: (sha256: "70c3f8028909368946929ce092b6912a3e9dcdfb9c893f40c905ce889bdb076e"))\;
 
   % unified.asset { name="PortableXmalloc", file="assets/src/filemagic_portable_xmalloc.c" }
-  'asset'
-  '1399'
-  'sha256:5dc0a1c17f42bdd11218fb929320ef78f6315cb24f5cebe963a921eb230b7b4d'
+  \dk.asset(byteSize: "1399", checksum: (sha256: "5dc0a1c17f42bdd11218fb929320ef78f6315cb24f5cebe963a921eb230b7b4d"))\;
 
   % unified.asset { name="MagicHeader", file="assets/src/filemagic_magic.h" }
-  'asset'
-  '4696'
-  'sha256:bfbc1f77de5b6d6ad4a7815af4f7d2b2ce5d4230ca9afb65beb6d6d8d1d902d6'
+  \dk.asset(byteSize: "4696", checksum: (sha256: "bfbc1f77de5b6d6ad4a7815af4f7d2b2ce5d4230ca9afb65beb6d6d8d1d902d6"))\;
 
   % unified.asset { name="MagicTestSource", file="assets/src/filemagic_magic_test.c" }
-  'asset'
-  '33805'
-  'sha256:ade0e0ef06c39d0b182f63e6b824c26201b0847dbc31838e455dad0c01ca79aa'
+  \dk.asset(byteSize: "33805", checksum: (sha256: "ade0e0ef06c39d0b182f63e6b824c26201b0847dbc31838e455dad0c01ca79aa"))\;
 
   % unified.asset { name="EmbeddedMagicHeader", file="assets/src/filemagic_embedded_magic.h" }
-  'asset'
-  '266'
-  'sha256:275eff802625b17818f7e4459b9b4f34d4f8a0cc5fc1ccabf7f8096881a8548f'
+  \dk.asset(byteSize: "266", checksum: (sha256: "275eff802625b17818f7e4459b9b4f34d4f8a0cc5fc1ccabf7f8096881a8548f"))\;
 
   % unified.asset { name="EmbeddedMagicSource", file="assets/src/filemagic_embedded_magic.c" }
-  'asset'
-  '4709251'
-  'sha256:0d82380611b8ce6db09e0eefa585ee8719999601e019c7eced7ac9d719b14645'
+  \dk.asset(byteSize: "4709251", checksum: (sha256: "0d82380611b8ce6db09e0eefa585ee8719999601e019c7eced7ac9d719b14645"))\;
