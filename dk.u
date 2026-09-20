@@ -53,17 +53,17 @@ SUCH DAMAGE.
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_LLVM" }
   \dk.import(type: "github-l2", library: "CommonsBase_LLVM",
-    version: "0.1.20260916234322",
-    checksum: (blake2b-256: "704dfaa5e49cf84a0d9590f4171ab8f3cbf1b410e9075f49389e62a7b73df739",
-      sha256: "e66256adfd231ea822bbad59bba124c3c851243082be0426af191ae18751611a",
-      sha1: "d6fd87038fb72a64e054be43c9fa4f3c73105995"))\;
+    version: "0.1.20260920144347",
+    checksum: (blake2b-256: "29340243f0aa373b9b8c69648885441806d919cf7b1883a4cfd50d8dc1ae7fb7",
+      sha256: "56312cd1d2868eff482798255793a35f8b2dbaf9c80a697622780d67639783fe",
+      sha1: "edb3717d53693e62b6a8e908c1aa55dad96ce3d2"))\;
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_Std" }
   \dk.import(type: "github-l2", library: "CommonsBase_Std",
-    version: "2.6.20260916234322",
-    checksum: (blake2b-256: "3a079f7fa7b3d8905185e9d6bf3ee7ddc07a467def1557a876084698ff1a4e70",
-      sha256: "eafd48ee3331a4be2fee20055a7d2f88c33b53989c2dcc7f9a6b5ac51349f250",
-      sha1: "4d68e449c8cdd5b3523b273cd3b59e45522a2ff5"))\;
+    version: "2.6.20260920144347",
+    checksum: (blake2b-256: "8f7d86924c66f6d1778c08214b1adab001f75677cb141c376b837ee6e39f57fa",
+      sha256: "b3c67724e09942596d8af32635b585698f931047e74332bc011a532a430d5438",
+      sha1: "f1d0701257aa61a5fbd480833e464263422a4135"))\;
 
 ## Assets
 
